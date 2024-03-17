@@ -2,22 +2,18 @@
 # This is a generic template to serve as a base for your custom config
 # See: https://circleci.com/docs/configuration-reference
 version: 2.1
-
 jobs:
-  build:
+  test:
     docker:
       - image: circleci/openjdk:11
-
     steps:
       - checkout
-
-      # Compilar y ejecutar los tests
+      # Replace this with a real test runner invocation
       - run:
           name: Compile and Run Java Tests
           command: |
             javac -cp .:junit.jar:Mp_Final/src:Mp_Final/srcTest Mp_Final/src/Ability.java Mp_Final/srcTest/AbilityTest.java
             java -cp .:junit.jar:hamcrest-core.jar:Mp_Final/src:Mp_Final/srcTest org.junit.runner.JUnitCore Mp_Final/srcTest/AbilityTest
-
   build:
     docker:
       - image: cimg/base:stable
