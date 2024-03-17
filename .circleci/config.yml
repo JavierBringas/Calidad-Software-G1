@@ -12,7 +12,7 @@ jobs:
       - run:
           name: Compile and Run Java Tests
           command: |
-            javac -cp .:junit.jar Mp_Final/src/Ability.java Mp_Final/srcTest/AbilityTest.java
+            javac -cp .:junit.jar:Mp_Final/src Mp_Final/src/Ability.java Mp_Final/srcTest/AbilityTest.java
             java -cp .:junit.jar:hamcrest-core.jar org.junit.runner.JUnitCore Mp_Final/srcTest/AbilityTest
   build:
     docker:
