@@ -1,7 +1,7 @@
 import java.io.Serializable;
 import java.util.*;
 
-public class Character_App_App implements Serializable {
+public class Character_App implements Serializable {
     private String name;
     private String description;
     private TCharacter type;
