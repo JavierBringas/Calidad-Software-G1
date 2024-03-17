@@ -125,9 +125,9 @@ public class NewCharacter implements Serializable {
         String[] nombresAr = {"Armadura de placas", "Armadura de malla", "Armadura de cuero", "Armadura de escamas", "Armadura de cota de malla con capucha", "Armadura de brigandina", "Armadura de bandido", "Armadura de anillas", "Armadura de anillas", "Armadura de la Orden Sagrada"};
         for (int a = 0 ; a < 5; a++) {
             Armor nuevoAr = new Armor();
-            String nombre = nombresAr[(randInt.nextInt(0, 10))];
-            nuevoAr.setAttack(randInt.nextInt(1, 4));
-            nuevoAr.setDefense(randInt.nextInt(0, 3));
+            String nombre = nombresAr[(randInt.nextInt(10))];
+            nuevoAr.setAttack(randInt.nextInt(4));
+            nuevoAr.setDefense(randInt.nextInt(3));
             nuevoAr.setName(nombre);
             nuevoAr.setActive(false);
             listaAr.add(nuevoAr);
@@ -153,14 +153,14 @@ public class NewCharacter implements Serializable {
 
         for (int a = 0 ; a < 3; a++) {
             Minion minion = new Minion();
-            nombre = nombresNombres[(randInt.nextInt(0, 6))];
+            nombre = nombresNombres[(randInt.nextInt(6))];
 
             minion.setName(nombre);
-            minion.setHitPoints(randInt.nextInt(1, 4));
+            minion.setHitPoints(randInt.nextInt(4));
             if(vamp) {
-                minion.setTipominion(nombresTm.get((randInt.nextInt(0, 2))));
+                minion.setTipominion(nombresTm.get((randInt.nextInt(2))));
             } else{
-                minion.setTipominion(nombresTm.get((randInt.nextInt(0, 3))));
+                minion.setTipominion(nombresTm.get((randInt.nextInt(3))));
             }
             if (minion.getTipominion() == TMinion.DEMON) {
                 Demon demon = new Demon();
@@ -174,7 +174,7 @@ public class NewCharacter implements Serializable {
                     Minion nuevominion = new Minion();
 
                     nuevominion.setName(nombre);
-                    nuevominion.setHitPoints(randInt.nextInt(1, 4));
+                    nuevominion.setHitPoints(randInt.nextInt(4));
                     nuevalista.add(nuevominion);
 
 
@@ -189,7 +189,7 @@ public class NewCharacter implements Serializable {
                 ghoul.setName(minion.getName());
                 ghoul.setHitPoints(minion.getHitPoints());
                 ghoul.setTipominion(TMinion.GHOUL);
-                ghoul.setDependency(randInt.nextInt(1,6));
+                ghoul.setDependency(randInt.nextInt(6));
 
                 minionList.add(ghoul);
             }
