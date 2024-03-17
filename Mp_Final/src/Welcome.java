@@ -28,7 +28,7 @@ public class Welcome {
                     System.out.println("\nSaliendo...");
                     b = false;
                 }
-                default -> System.out.println("Número incorrecto");
+                default: System.out.println("Número incorrecto");
             }
         } while (b);  //Condiciona hasta que se meta un input valido
         scanner.close();
