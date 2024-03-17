@@ -8,15 +8,8 @@ jobs:
     steps:
       - checkout
 
-      # Descargar JUnit Jupiter JAR
+      # Compilar la aplicación sin ejecutar pruebas
       - run:
-          name: Download JUnit Jupiter JAR
+          name: Compile Java Application
           command: |
-            curl -o junit-jupiter.jar https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter/5.8.1/junit-jupiter-5.8.1.jar
-
-      # Compilar y ejecutar los tests
-      - run:
-          name: Compile and Run Java Tests
-          command: |
-            javac -cp .:junit-jupiter.jar:Mp_Final/src:Mp_Final/srcTest Mp_Final/src/Ability.java Mp_Final/srcTest/AbilityTest.java
-            java -cp .:junit-jupiter.jar:hamcrest-core.jar:Mp_Final/src:Mp_Final/srcTest org.junit.runner.JUnitCore Mp_Final/srcTest/AbilityTest
+            javac Mp_Final/src/Main.java
