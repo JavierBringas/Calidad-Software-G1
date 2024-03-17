@@ -20,5 +20,5 @@ jobs:
       - run:
           name: Compile and Run Java Tests
           command: |
-            javac -cp .:junit-jupiter.jar:Mp_Final/src:Mp_Final/srcTest Mp_Final/src/Ability.java Mp_Final/srcTest/AbilityTest.java
+            javac -cp .:junit-jupiter.jar:Mp_Final/src:Mp_Final/src/main/java Mp_Final/src/main/java/Ability.java Mp_Final/srcTest/AbilityTest.java
             java -cp .:junit-jupiter.jar:hamcrest-core.jar:Mp_Final/src:Mp_Final/srcTest org.junit.runner.JUnitCore Mp_Final/srcTest/AbilityTest
