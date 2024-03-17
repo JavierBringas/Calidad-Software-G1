@@ -10,9 +10,6 @@ jobs:
       - checkout
       # Replace this with a real test runner invocation
       - run:
-          name: Build and Test
-          command: mvn test
-      - run:
           name: Compile and Run Java Tests
           command: |
             javac -cp .:junit.jar Ability.java AbilityTest.java
