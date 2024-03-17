@@ -2,7 +2,7 @@ import java.io.Serializable;
 import java.util.Scanner;
 
 public class GoldValue implements Serializable {
-    public Character GoldValue(Character c) {
+    public Character_App GoldValue(Character c) {
     Scanner scanner = new Scanner(System.in);
     System.out.println("Oro actual: " + c.getGoldValue());
 

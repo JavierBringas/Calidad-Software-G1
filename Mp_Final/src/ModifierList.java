@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class ModifierList {
 
-    public Character ModifierList(Character c){
+    public Character_App ModifierList(Character c){
         int j =0;
         for (int i = 0; i < c.getModifiersList().size(); i++) {
             Modifiers modi = c.getModifiersList().get(i);

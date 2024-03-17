@@ -4,7 +4,7 @@ import java.util.*;
 public class EditCharacter implements Serializable {
 
     private DatabaseManager databaseManager;
-    private Map<String, Character> databaseC = new HashMap<>();
+    private Map<String, Character_App> databaseC = new HashMap<>();
     private Map<String, User> databaseU = new HashMap<>();
 
 
@@ -44,7 +44,7 @@ public class EditCharacter implements Serializable {
             }
         } while (databaseC.get(player) == null);
 
-        Character c = databaseC.get(player);
+        Character_App c = databaseC.get(player);
         scanner = new Scanner(System.in);
         boolean exit = false;
         while (!exit) {
@@ -169,67 +169,67 @@ public class EditCharacter implements Serializable {
         menuAdmin.MenuAdmin(u);
 
     }
-    private Character editName (Character c){
+    private Character_App editName (Character c){
         Name name = new Name();
         c = name.Name(c);
         return c;
     }
-    private Character editType (Character c){  //Type
+    private Character_App editType (Character c){  //Type
         Type editType = new Type();
         c = editType.Type(c);
         return c;
     }
 
-    private Character editWeaponSet (Character c){ //WeaponSet
+    private Character_App editWeaponSet (Character c){ //WeaponSet
         WeaponSet weaponSet = new WeaponSet();
         c = weaponSet.WeaponSet(c);
         return c;
     }
-    private Character editArmor (Character c){
+    private Character_App editArmor (Character c){
         ArmorSet armorSet = new ArmorSet();
         c = armorSet.ArmorSet(c);
         return c;
     }
 
-    private Character editHitPoints (Character c){
+    private Character_App editHitPoints (Character c){
         HitPoints HitPoints = new HitPoints();
         c = HitPoints.HitPoints(c);
         return c;
     }
 
-    private Character editPower (Character c){
+    private Character_App editPower (Character c){
         Power Power = new Power();
         c = Power.Power(c);
         return c;
     }
 
-    private Character editMinionMap (Character c){
+    private Character_App editMinionMap (Character c){
         MinionMap minionMap = new MinionMap();
         c = minionMap.MinionMap(c);
         return c;
     }
 
-    private Character editDescription (Character c){
+    private Character_App editDescription (Character c){
         Description description = new Description();
         c = description.Description(c);
         return c;
     }
-    private Character editSpecialAbilities (Character c){
+    private Character_App editSpecialAbilities (Character c){
         SpecialAbility specialAbilities = new SpecialAbility();
         c = specialAbilities.SpecialAbility(c);
         return c;
     }
-    private Character editGoldValues (Character c){
+    private Character_App editGoldValues (Character c){
         GoldValue goldValues = new GoldValue();
         c = goldValues.GoldValue(c);
         return c;
     }
-    private Character editModifiersList (Character c){
+    private Character_App editModifiersList (Character c){
         ModifierList modifiersList = new ModifierList();
         c = modifiersList.ModifierList(c);
         return c;
     }
-    private Character editWins (Character c){
+    private Character_App editWins (Character c){
         Wins wins = new Wins();
         c = wins.Wins(c);
         return c;
@@ -244,11 +244,11 @@ public class EditCharacter implements Serializable {
         this.databaseManager = databaseManager;
     }
 
-    public Map<String, Character> getDatabaseC () {
+    public Map<String, Character_App> getDatabaseC () {
         return databaseC;
     }
 
-    public void setDatabaseC (Map < String, Character > databaseC){
+    public void setDatabaseC (Map < String, Character_App > databaseC){
         this.databaseC = databaseC;
     }
 }

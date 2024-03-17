@@ -15,8 +15,8 @@ class ArmorSetTest {
     void armorSet() {
 
         DatabaseManager databaseManager = new DatabaseManager();
-        Map<String, Character> databaseC = new HashMap<>();
-        Character character = new Character();
+        Map<String, Character_App> databaseC = new HashMap<>();
+        Character_App Character_App = new Character_App();
         Armor armor  = new Armor();
         ArmorSet armorSet = new ArmorSet();
         List<Armor> setdearmadura = new ArrayList<>(1);
@@ -28,7 +28,7 @@ class ArmorSetTest {
         armor.setAttack(1);
         armor.setName("Minish Cap");
         setdearmadura.add(armor);
-        character.setArmorSet(setdearmadura);
+        Character_App.setArmorSet(setdearmadura);
 
         String[] entradas = {"1","1","Coraza del hombre muerto"};
         String ch = String.join(System.lineSeparator(), entradas) + System.lineSeparator();
@@ -36,9 +36,9 @@ class ArmorSetTest {
         InputStream in = new ByteArrayInputStream(ch.getBytes());
         System.setIn(in);
 
-        character = armorSet.ArmorSet(character);
+        Character_App = armorSet.ArmorSet(character);
 
-        assertEquals("Coraza del hombre muerto" , character.getArmorSet().get(0).getName() );
+        assertEquals("Coraza del hombre muerto" , Character_App.getArmorSet().get(0).getName() );
 
 
 
@@ -48,9 +48,9 @@ class ArmorSetTest {
         in = new ByteArrayInputStream(ch.getBytes());
         System.setIn(in);
 
-        character = armorSet.ArmorSet(character);
+        Character_App = armorSet.ArmorSet(character);
 
-        assertEquals(3 , character.getArmorSet().get(0).getAttack() );
+        assertEquals(3 , Character_App.getArmorSet().get(0).getAttack() );
 
         String[] entradas3 = {"1","3","2"};
         ch = String.join(System.lineSeparator(), entradas3) + System.lineSeparator();
@@ -58,9 +58,9 @@ class ArmorSetTest {
         in = new ByteArrayInputStream(ch.getBytes());
         System.setIn(in);
 
-        character = armorSet.ArmorSet(character);
+        Character_App = armorSet.ArmorSet(character);
 
-        assertEquals(2 , character.getArmorSet().get(0).getDefense() );
+        assertEquals(2 , Character_App.getArmorSet().get(0).getDefense() );
 
         String[] entradas4 = {"1","4","2"};
         ch = String.join(System.lineSeparator(), entradas4) + System.lineSeparator();
@@ -73,9 +73,9 @@ class ArmorSetTest {
         in = new ByteArrayInputStream(ch.getBytes());
         System.setIn(in);
 
-        character = armorSet.ArmorSet(character);
+        Character_App = armorSet.ArmorSet(character);
 
-        assertEquals(3 , character.getArmorSet().get(0).getAttack() );
+        assertEquals(3 , Character_App.getArmorSet().get(0).getAttack() );
 
 
         String[] entradas6 = {"1","3","4","e","1"};
@@ -84,10 +84,10 @@ class ArmorSetTest {
         in = new ByteArrayInputStream(ch.getBytes());
         System.setIn(in);
 
-        character = armorSet.ArmorSet(character);
+        Character_App = armorSet.ArmorSet(character);
 
 
-        assertEquals(1 , character.getArmorSet().get(0).getDefense() );
+        assertEquals(1 , Character_App.getArmorSet().get(0).getDefense() );
 
         String[] entradas7 = {"1","4","4","e","2"};
         ch = String.join(System.lineSeparator(), entradas7) + System.lineSeparator();
@@ -100,9 +100,9 @@ class ArmorSetTest {
         in = new ByteArrayInputStream(ch.getBytes());
         System.setIn(in);
 
-        character = armorSet.ArmorSet(character);
+        Character_App = armorSet.ArmorSet(character);
 
-        assertEquals(1 , character.getArmorSet().get(0).getDefense() );
+        assertEquals(1 , Character_App.getArmorSet().get(0).getDefense() );
 
         String[] entradas9 = {"1","3","-1", "3"};
         ch = String.join(System.lineSeparator(), entradas9) + System.lineSeparator();
@@ -110,9 +110,9 @@ class ArmorSetTest {
         in = new ByteArrayInputStream(ch.getBytes());
         System.setIn(in);
 
-        character = armorSet.ArmorSet(character);
+        Character_App = armorSet.ArmorSet(character);
 
-        assertEquals(3 , character.getArmorSet().get(0).getDefense() );
+        assertEquals(3 , Character_App.getArmorSet().get(0).getDefense() );
 
         String[] entradas10 = {"3", ""};
         ch = String.join(System.lineSeparator(), entradas10) + System.lineSeparator();
@@ -120,9 +120,9 @@ class ArmorSetTest {
         in = new ByteArrayInputStream(ch.getBytes());
         System.setIn(in);
 
-        character = armorSet.ArmorSet(character);
+        Character_App = armorSet.ArmorSet(character);
 
-        assertEquals(3 , character.getArmorSet().get(0).getDefense() );
+        assertEquals(3 , Character_App.getArmorSet().get(0).getDefense() );
 
 
     }

@@ -4,7 +4,7 @@ import java.util.*;
 public class AddArmor implements Serializable {
     private DatabaseManager databaseManager = new DatabaseManager();
 
-    public Character AddArmor(Character c){
+    public Character_App AddArmor(Character c){
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Si quiere salir escriba 'salir':");

@@ -4,7 +4,7 @@ import java.util.*;
 public class AddWeapon  implements Serializable {
     private DatabaseManager databaseManager = new DatabaseManager();
 
-    public Character AddWeapon(Character c){
+    public Character_App AddWeapon(Character c){
             Scanner scanner = new Scanner(System.in);
             System.out.println("Si quiere salir escriba 'salir':");
             String salir = scanner.nextLine();

@@ -4,7 +4,7 @@ import java.util.*;
 public class ChallengeMenu  implements Serializable {
     private DatabaseManager databaseManager = new DatabaseManager();
     private Map<String, List<Challenge>> databaseP = new HashMap<>();
-    private Map<String, Character> databaseC = new HashMap<>();
+    private Map<String, Character_App> databaseC = new HashMap<>();
     private Map<String, User> databaseU = new HashMap<>();
 
     public User ChallengeMenu(User defiant) {
@@ -45,8 +45,8 @@ public class ChallengeMenu  implements Serializable {
         User defied = databaseU.get(username);
         String aux1 = defiant.getRegisterNumber();
         String aux2 = defied.getRegisterNumber();
-        Character c1 = databaseC.get(aux1);
-        Character c2 = databaseC.get(aux2);
+        Character_App c1 = databaseC.get(aux1);
+        Character_App c2 = databaseC.get(aux2);
         int maxBet = Math.min(c1.getGoldValue(), c2.getGoldValue());
         int gold = maxBet+1;
         do {

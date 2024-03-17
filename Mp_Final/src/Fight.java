@@ -9,7 +9,7 @@ public class Fight implements Serializable, Cloneable {
     private Round roundFight = new Round();
     private Combat combat = new Combat();
     private DatabaseManager databaseManager = new DatabaseManager();
-    private Map<String, Character> databaseC = new HashMap<>();
+    private Map<String, Character_App> databaseC = new HashMap<>();
     private Map<String, History> databaseH = new HashMap<>();
     private Map<String, User> databaseU = new HashMap<>();
 
@@ -26,9 +26,9 @@ public class Fight implements Serializable, Cloneable {
         int rondas = combat.getRounds();
         rondas += 1;
         combat.setRounds(rondas);
-        Character pdefiant = databaseC.get(udefiant.getRegisterNumber());
+        Character_App pdefiant = databaseC.get(udefiant.getRegisterNumber());
 
-        Character pdefied = databaseC.get(udefied.getRegisterNumber());
+        Character_App pdefied = databaseC.get(udefied.getRegisterNumber());
 
         // Defiant
         resultado = RoundBalance(defiant, random);
@@ -153,8 +153,8 @@ public class Fight implements Serializable, Cloneable {
 
     public void setFight(User udefiant, User udefied, int gold){
         databaseC = databaseManager.obtainDatabaseC();
-        Character pdefiant = databaseC.get(udefiant.getRegisterNumber());
-        Character pdefied = databaseC.get(udefied.getRegisterNumber());
+        Character_App pdefiant = databaseC.get(udefiant.getRegisterNumber());
+        Character_App pdefied = databaseC.get(udefied.getRegisterNumber());
 
         Fighter defiant = new Fighter();
         Fighter defied = new Fighter();
@@ -225,8 +225,8 @@ public class Fight implements Serializable, Cloneable {
          History history = databaseH.get(udefiant.getRegisterNumber());
          History history2 = databaseH.get(udefied.getRegisterNumber());
          Match nuevapartida = new Match();
-         Character perAnt = databaseC.get(udefiant.getRegisterNumber());
-         Character perEd = databaseC.get(udefied.getRegisterNumber());
+         Character_App perAnt = databaseC.get(udefiant.getRegisterNumber());
+         Character_App perEd = databaseC.get(udefied.getRegisterNumber());
          combat.setState(state);
          List<Round> rondas= combat.getRoundList();
          Round rondafinal = rondas.get(rondas.size()-1);

@@ -16,10 +16,10 @@ public class ValidateChallengesTest {
 
         DatabaseManager databaseManager = new DatabaseManager();
         Map<String, List<Challenge>> databaseP = databaseManager.obtainDatabaseP();
-        Map<String, Character> databaseC = databaseManager.obtainDatabaseC();
+        Map<String, Character_App> databaseC = databaseManager.obtainDatabaseC();
         Modifiers modifiers = new Modifiers();
-        Character character = new Character();
-        Character character1 = new Character();
+        Character_App Character_App = new Character_App();
+        Character_App Character_App1 = new Character_App();
         databaseC = databaseManager.obtainDatabaseC();
 
 
@@ -46,8 +46,8 @@ public class ValidateChallengesTest {
         user2.setRegisterNumber("CABROI2");
 
 
-        character.setModifierList(modifierList);
-        character1.setModifierList(modifierList2);
+        Character_App.setModifierList(modifierList);
+        Character_App1.setModifierList(modifierList2);
 
         databaseC.put(user1.getRegisterNumber(),character1);
         databaseC.put(user2.getRegisterNumber(),character);

@@ -5,14 +5,14 @@ import java.util.Scanner;
 
 public class DeleteCharacter  implements Serializable {
 
-    private Map<String, Character> databaseC = new HashMap<>();
+    private Map<String, Character_App> databaseC = new HashMap<>();
     private DatabaseManager databaseManager;
 
-    public Character deleteCharacter(User u) {
+    public Character_App deleteCharacter(User u) {
         databaseManager = new DatabaseManager();
         databaseC = databaseManager.obtainDatabaseC();
         Scanner input = new Scanner(System.in);
-        Character aux = databaseC.get(u.getRegisterNumber());
+        Character_App aux = databaseC.get(u.getRegisterNumber());
         String  option;
             System.out.println("========== Menu de Borrado de personaje ==========");
             System.out.println("1. Borrar Personaje ");
@@ -33,11 +33,11 @@ public class DeleteCharacter  implements Serializable {
         databaseC.remove(u.getRegisterNumber());
         databaseManager.saveDatabaseC(databaseC);
     }
-        public Map<String, Character> getDatabaseC () {
+        public Map<String, Character_App> getDatabaseC () {
             return databaseC;
         }
 
-        public void setDatabaseC (Map < String, Character > databaseC){
+        public void setDatabaseC (Map < String, Character_App > databaseC){
             this.databaseC = databaseC;
         }
 

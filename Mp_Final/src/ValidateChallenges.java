@@ -8,7 +8,7 @@ import java.util.Map;
 public class  ValidateChallenges implements Serializable {
     private DatabaseManager databaseManager;
     private Map<String, List<Challenge>> databaseP = new HashMap<>();
-    private Map<String, Character> databaseC = new HashMap<>();
+    private Map<String, Character_App> databaseC = new HashMap<>();
 
 
     public void ValidateChallenges(User u) {
@@ -95,8 +95,8 @@ public class  ValidateChallenges implements Serializable {
                     User u1 = cc.get(chIndex).getDefied();
                     User u2 = cc.get(chIndex).getDefiant();
 
-                    Character char1 = databaseC.get(u1.getRegisterNumber());
-                    Character char2 = databaseC.get(u2.getRegisterNumber());
+                    Character_App char1 = databaseC.get(u1.getRegisterNumber());
+                    Character_App char2 = databaseC.get(u2.getRegisterNumber());
 
                     List<Modifiers> listmod = char1.getModifiersList();
                     List<Modifiers> listmod2 = char2.getModifiersList();

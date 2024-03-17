@@ -14,7 +14,7 @@ class DatabaseManagerTest {
         DatabaseManager databaseManager = new DatabaseManager();
         Map<String,Character> databaseC = databaseManager.obtainDatabaseC();
         Map<String,Character> aux = databaseManager.obtainDatabaseC();
-        Character character = new Character();
+        Character_App Character_App = new Character_App();
 
         databaseC.put("aaa",character);
         databaseManager.saveDatabaseC(databaseC);

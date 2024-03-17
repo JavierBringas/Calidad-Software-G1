@@ -10,16 +10,16 @@ class WinsTest {
     @Test
     void wins() {
         Wins wins = new Wins();
-        Character character = new Character();
+        Character_App Character_App = new Character_App();
         String ch = "15\n";
-        character.setWins(5);
+        Character_App.setWins(5);
         InputStream in = new ByteArrayInputStream(ch.getBytes());
         System.setIn(in);
-        Character nuevoper = wins.Wins(character);
+        Character_App nuevoper = wins.Wins(character);
         assertEquals(15, nuevoper.getWins());
 
         ch = "salir\n";
-        character.setWins(45);
+        Character_App.setWins(45);
         in = new ByteArrayInputStream(ch.getBytes());
         System.setIn(in);
         nuevoper = wins.Wins(character);

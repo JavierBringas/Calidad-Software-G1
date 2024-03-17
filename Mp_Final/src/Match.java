@@ -3,15 +3,15 @@ import java.time.LocalDateTime;
 import java.util.Date;
 
 public class Match implements Serializable {
-    private Character defiant;
+    private Character_App defiant;
     private int goldBet;
     private int rounds;
     private boolean minionsLeft;
-    private Character defied;
-    private Character winner;
+    private Character_App defied;
+    private Character_App winner;
     private LocalDateTime date;
 
-    public Character getDefiant() {
+    public Character_App getDefiant() {
         return defiant;
     }
 
@@ -43,7 +43,7 @@ public class Match implements Serializable {
         this.minionsLeft = minionsLeft;
     }
 
-    public Character getDefied() {
+    public Character_App getDefied() {
         return defied;
     }
 
@@ -51,7 +51,7 @@ public class Match implements Serializable {
         this.defied = defied;
     }
 
-    public Character getWinner() {
+    public Character_App getWinner() {
         return winner;
     }
 

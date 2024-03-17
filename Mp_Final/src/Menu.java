@@ -7,7 +7,7 @@ import java.util.*;
 public class Menu implements Serializable {
     private DatabaseManager databaseManager = new DatabaseManager();
     private Map<String, List<Challenge>> databaseP = new HashMap<>();
-    private Map<String, Character> databaseC = new HashMap<>();
+    private Map<String, Character_App> databaseC = new HashMap<>();
     private Map<String, User> databaseU = new HashMap<>();
 
     public void Menu(User u){
@@ -17,7 +17,7 @@ public class Menu implements Serializable {
         boolean d;
         Challenge ch = new Challenge();
         List<Challenge> challengeList ;
-        Character c;
+        Character_App c;
 
 
         String forcedoption;
@@ -33,10 +33,10 @@ public class Menu implements Serializable {
 
         if (databaseC == null){
             System.out.println("\n <<Es obligatorio crear un persoanje si aún no tienes uno>> ");
-            characterMenu(u);
+            Character_AppMenu(u);
         } else if (databaseC.get(u.getRegisterNumber()) == null ){
             System.out.println("\n <<Es obligatorio crear un persoanje si aún no tienes uno>> ");
-            characterMenu(u);
+            Character_AppMenu(u);
         }else{
 
            databaseP = databaseManager.obtainDatabaseP();
@@ -122,7 +122,7 @@ public class Menu implements Serializable {
                     case "2" : equipmentMenu(u, false); // ok
                     case "3" : challengeMenu(u); // ok
                     case "4" : showhistory(u); // ok
-                    case "5" : characterMenu(u); // ok
+                    case "5" : Character_AppMenu(u); // ok
                     case "6" : ranking(); //ok
                     case "7" : rules(); //ok
                     case "0" : {
@@ -169,9 +169,9 @@ public class Menu implements Serializable {
         showHistory.ShowHistory(u);
 
     }
-    private void characterMenu(User u){
-        CharacterMenu characterMenu = new CharacterMenu();
-        characterMenu.CharacterMenu(u);
+    private void Character_AppMenu(User u){
+        Character_AppMenu Character_AppMenu = new Character_AppMenu();
+        Character_AppMenu.CharacterMenu(u);
 
     }
     private void ranking(){
@@ -211,11 +211,11 @@ public class Menu implements Serializable {
     }
 
 
-    public Map<String, Character> getDatabaseC() {
+    public Map<String, Character_App> getDatabaseC() {
         return databaseC;
     }
 
-    public void setDatabaseC(Map<String, Character> databaseC) {
+    public void setDatabaseC(Map<String, Character_App> databaseC) {
         this.databaseC = databaseC;
     }
 

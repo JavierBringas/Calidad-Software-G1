@@ -15,8 +15,8 @@ class DeleteCharacterTest {
         Map<String,Character> databaseC = databaseManager.obtainDatabaseC();
         Map<String,Character> aux = databaseManager.obtainDatabaseC();
         User user = new User();
-        Character character = new Character();
-        character.setName("quetzatcoatl");
+        Character_App Character_App = new Character_App();
+        Character_App.setName("quetzatcoatl");
         user.setRegisterNumber("AAAAA");
         databaseC.put(user.getRegisterNumber(),character);
         databaseManager.saveDatabaseC(databaseC);
@@ -26,7 +26,7 @@ class DeleteCharacterTest {
         ByteArrayInputStream in = new ByteArrayInputStream(ch.getBytes());
         System.setIn(in);
 
-        Character c = deleteCharacter.deleteCharacter(user);
+        Character_App c = deleteCharacter.deleteCharacter(user);
         databaseC = databaseManager.obtainDatabaseC();
         assertEquals(c.getName(),character.getName());
         assertEquals(aux.size()+1,databaseC.size());
@@ -50,7 +50,7 @@ class DeleteCharacterTest {
         Map<String,Character> databaseC = databaseManager.obtainDatabaseC();
         Map<String,Character> aux = databaseManager.obtainDatabaseC();
         User user = new User();
-        Character character = new Character();
+        Character_App Character_App = new Character_App();
         user.setRegisterNumber("AAAAA");
         databaseC.put(user.getRegisterNumber(),character);
         databaseManager.saveDatabaseC(databaseC);

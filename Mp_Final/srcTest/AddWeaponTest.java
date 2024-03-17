@@ -12,16 +12,16 @@ class AddWeaponTest {
     @Test
     void addWeapon(){
         AddWeapon addWeapon = new AddWeapon();
-        Character character = new Character();
+        Character_App Character_App = new Character_App();
         List<Weapon> weaponList = new ArrayList<>();
-        character.setWeaponSet(weaponList);
+        Character_App.setWeaponSet(weaponList);
 
         String[] entradas = {"a","TestWeapon","4","3","4","3","0","1"};
         String input = String.join(System.lineSeparator(), entradas) + System.lineSeparator();
         InputStream in = new ByteArrayInputStream(input.getBytes());
         System.setIn(in);
 
-        Character newCharacter = addWeapon.AddWeapon(character);
+        Character_App newCharacter = addWeapon.AddWeapon(character);
         assertEquals(1, newCharacter.getWeaponSet().size());
         assertEquals("TestWeapon", newCharacter.getWeaponSet().get(0).getName());
         assertEquals(3, newCharacter.getWeaponSet().get(0).getAttack());

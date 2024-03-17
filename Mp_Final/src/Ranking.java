@@ -9,11 +9,11 @@ import java.util.function.ToIntFunction;
 import java.util.function.ToLongFunction;
 
 public class Ranking {
-    public List<Character> Ranking(List<Character> characters){
+    public List<Character> Ranking(List<Character> Character_Apps){
         if(characters.size()>1) {
-           quickSort(characters, 0, characters.size() - 1);
+           quickSort(characters, 0, Character_Apps.size() - 1);
         }
-        return characters;
+        return Character_Apps;
     }
 
     public static void quickSort(List<Character> list, int left, int right) {

@@ -4,7 +4,7 @@ import java.util.*;
 public class AddFeature  implements Serializable {
 
     private DatabaseManager databaseManager = new DatabaseManager();
-    private Map<String, Character> databaseC = new HashMap<>();
+    private Map<String, Character_App> databaseC = new HashMap<>();
     private Map<String,List<Minion>> databaseM = new HashMap<>();
     private Map<String,User> databaseU = new HashMap<>();
 
@@ -45,7 +45,7 @@ public class AddFeature  implements Serializable {
 
     String option ;
     while(!exit){
-        Character c = databaseC.get(player);
+        Character_App c = databaseC.get(player);
         System.out.println("1. Agregar modificador");
         System.out.println("2. Agregar arma");
         System.out.println("3. Agregar armadura");
@@ -78,25 +78,25 @@ public class AddFeature  implements Serializable {
         this.databaseManager = databaseManager;
     }
 
-    private Character addModifier(Character c){
+    private Character_App addModifier(Character c){
         AddModifier addModifier = new AddModifier();
         c =  addModifier.AddModifier(c);
         return  c;
     }
 
-    private Character addWeapon(Character c){
+    private Character_App addWeapon(Character c){
         AddWeapon addWeapon = new AddWeapon();
         c = addWeapon.AddWeapon(c);
         return c;
     }
 
-    private Character addArmor(Character c){
+    private Character_App addArmor(Character c){
         AddArmor addArmor = new AddArmor();
         c = addArmor.AddArmor(c);
         return c;
     }
 
-    private Character addMinions(Character c){
+    private Character_App addMinions(Character c){
         AddMinion addMinion = new AddMinion();
         c.setMinionMap(addMinion.AddMinion(c.getMinionMap()));
         return c;

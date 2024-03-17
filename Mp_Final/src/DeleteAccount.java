@@ -7,7 +7,7 @@ public class DeleteAccount  implements Serializable {
 
     private DatabaseManager databaseManager = new DatabaseManager();
     private Map<String, User> databaseU = new HashMap<>();
-    private Map<String, Character> databaseC = new HashMap<>();
+    private Map<String, Character_App> databaseC = new HashMap<>();
     private final Map<String, History> databaseH = new HashMap<>();
 
     public User DeleteAccount(User u) {
@@ -63,11 +63,11 @@ public class DeleteAccount  implements Serializable {
         this.databaseU = databaseU;
     }
 
-    public Map<String, Character> getDatabaseC() {
+    public Map<String, Character_App> getDatabaseC() {
         return databaseC;
     }
 
-    public void setDatabaseC(Map<String, Character> databaseC) {
+    public void setDatabaseC(Map<String, Character_App> databaseC) {
         this.databaseC = databaseC;
     }
 

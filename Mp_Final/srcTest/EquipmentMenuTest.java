@@ -14,15 +14,15 @@ class EquipmentMenuTest {
     @Test
     void equipmentMenu() {
         DatabaseManager databaseManager = new DatabaseManager();
-        Map<String, Character> databaseC = new HashMap<>();
+        Map<String, Character_App> databaseC = new HashMap<>();
         Map<String, User> databaseU = new HashMap<>();
         databaseC =  databaseManager.obtainDatabaseC();
-        Character character = new Character();
+        Character_App Character_App = new Character_App();
         List<Weapon> listaa = new ArrayList<>();
         List<Armor> listaw = new ArrayList<>();
         EquipmentMenu equipmentMenu = new EquipmentMenu();
 
-        character.setName("Bof");
+        Character_App.setName("Bof");
         databaseU = databaseManager.obtainDatabaseU();
 
 
@@ -46,10 +46,10 @@ class EquipmentMenuTest {
         listaw.add(armor);
 
 
-        character.setWeaponSet(listaa);
-        character.setArmorSet(listaw);
+        Character_App.setWeaponSet(listaa);
+        Character_App.setArmorSet(listaw);
 
-        databaseC.put(user.getRegisterNumber(), character);
+        databaseC.put(user.getRegisterNumber(), Character_App);
         databaseU.put(user.getName(), user);
         databaseManager.saveDatabaseU(databaseU);
         databaseManager.saveDatabaseC(databaseC);
@@ -65,7 +65,7 @@ class EquipmentMenuTest {
 
         equipmentMenu.EquipmentMenu( user, true );
         databaseC = databaseManager.obtainDatabaseC();
-        Character aux =  databaseC.get(user.getRegisterNumber());
+        Character_App aux =  databaseC.get(user.getRegisterNumber());
 
         assertTrue(aux.getWeaponSet().get(0).isActive());
         assertTrue(aux.getArmorSet().get(0).isActive());

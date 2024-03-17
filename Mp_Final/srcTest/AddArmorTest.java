@@ -12,16 +12,16 @@ class AddArmorTest {
         @Test
         void addArmorTest() {
             AddArmor addArmor = new AddArmor();
-            Character character = new Character();
+            Character_App Character_App = new Character_App();
             List<Armor> armorList = new ArrayList<>();
-            character.setArmorSet(armorList);
+            Character_App.setArmorSet(armorList);
 
             String[] entradas = {"a","TestArmor","a","4","3","a","4","3"};
             String input = String.join(System.lineSeparator(), entradas) + System.lineSeparator();
             InputStream in = new ByteArrayInputStream(input.getBytes());
             System.setIn(in);
 
-            Character newCharacter = addArmor.AddArmor(character);
+            Character_App newCharacter = addArmor.AddArmor(character);
             assertEquals(1, newCharacter.getArmorSet().size());
             assertEquals("TestArmor", newCharacter.getArmorSet().get(0).getName());
             assertEquals(3, newCharacter.getArmorSet().get(0).getAttack());

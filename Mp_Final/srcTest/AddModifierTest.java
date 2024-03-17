@@ -12,16 +12,16 @@ class AddModifierTest {
     @Test
     void addModifier() {
         AddModifier addModifier = new AddModifier();
-        Character character = new Character();
+        Character_App Character_App = new Character_App();
         List<Modifiers> modifiersList = new ArrayList<>();
-        character.setModifierList(modifiersList);
+        Character_App.setModifierList(modifiersList);
 
         String[] entradas = {"a","TestMod","a","6","5","a","debilidad"};
         String input = String.join(System.lineSeparator(), entradas) + System.lineSeparator();
         InputStream in = new ByteArrayInputStream(input.getBytes());
         System.setIn(in);
 
-        Character newCharacter = addModifier.AddModifier(character);
+        Character_App newCharacter = addModifier.AddModifier(character);
         assertEquals(1, newCharacter.getModifiersList().size());
         assertEquals("TestMod", newCharacter.getModifiersList().get(0).getName());
         assertEquals(5, newCharacter.getModifiersList().get(0).getValue());

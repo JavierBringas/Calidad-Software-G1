@@ -16,7 +16,7 @@ class NewCharacterTest {
         InputStream in = new ByteArrayInputStream(ch.getBytes());
         System.setIn(in);
 
-        Character asd =  newCharacter.NewCharacter();
+        Character_App asd =  newCharacter.NewCharacter();
 
 
         Assertions.assertEquals("Jose", asd.getName());

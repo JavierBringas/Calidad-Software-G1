@@ -9,11 +9,11 @@ class RankingTest {
 
     @Test
     void Ranking() {
-        Character aux = new Character();
+        Character_App aux = new Character_App();
         aux.setWins(10);
-        Character aux2 = new Character();
+        Character_App aux2 = new Character_App();
         aux2.setWins(100);
-        Character aux3 = new Character();
+        Character_App aux3 = new Character_App();
         aux3.setWins(1);
         List<Character> charList = new ArrayList<>();
         List<Character> charList2 = new ArrayList<>();

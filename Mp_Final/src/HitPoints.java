@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class HitPoints implements Serializable {
 
-    public Character HitPoints(Character c) {
+    public Character_App HitPoints(Character c) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Puntos de vida actuales: " + c.gethP());
 

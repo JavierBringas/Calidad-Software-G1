@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.*;
 
 public class ShowRanking implements Serializable {
-    private Map<String, Character> databaseR = new HashMap<>();
+    private Map<String, Character_App> databaseR = new HashMap<>();
     private DatabaseManager databaseManager = new DatabaseManager();
     private final Ranking rank = new Ranking();
 
@@ -14,10 +14,10 @@ public class ShowRanking implements Serializable {
     public void ShowRanking(){
         databaseR = databaseManager.obtainDatabaseC();
 
-        List<Character> characters = new ArrayList<>(databaseR.values());
-        characters = rank.Ranking(characters);
+        List<Character> Character_Apps = new ArrayList<>(databaseR.values());
+        Character_Apps = rank.Ranking(characters);
         System.out.println("[-----------Ranking-----------]");
-        for (Character c : characters) {
+        for (Character c : Character_Apps) {
             System.out.println("Personaje: " + c.getName() + " Victorias: " + c.getWins());
         }
         Scanner scanner = new Scanner(System.in);
@@ -25,11 +25,11 @@ public class ShowRanking implements Serializable {
     }
 
 
-    public Map<String, Character> getDatabaseR() {
+    public Map<String, Character_App> getDatabaseR() {
         return databaseR;
     }
 
-    public void setDatabaseR(Map<String, Character> databaseR) {
+    public void setDatabaseR(Map<String, Character_App> databaseR) {
         this.databaseR = databaseR;
     }
 

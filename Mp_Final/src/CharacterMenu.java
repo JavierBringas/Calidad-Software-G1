@@ -1,15 +1,15 @@
 import java.io.Serializable;
 import java.util.*;
 
-public class CharacterMenu  implements Serializable {
+public class Character_AppMenu  implements Serializable {
 
     private User user;
     private DatabaseManager databaseManager;
-    private Map<String, Character> databaseC = new HashMap<>();
+    private Map<String, Character_App> databaseC = new HashMap<>();
 
 
 
-    public  void CharacterMenu (User u) {
+    public  void Character_AppMenu (User u) {
         Scanner input = new Scanner(System.in);
         databaseManager = new DatabaseManager();
         databaseC = databaseManager.obtainDatabaseC();
@@ -17,21 +17,21 @@ public class CharacterMenu  implements Serializable {
 
         if (databaseC == null){
             NewCharacter newCharacter = new NewCharacter();
-            Character c = newCharacter.NewCharacter();
+            Character_App c = newCharacter.NewCharacter();
             databaseC.put(u.getRegisterNumber(), c);
             databaseManager.saveDatabaseC(databaseC);
 
             menu(u);
         }else if (databaseC.get(u.getRegisterNumber()) == null){
             NewCharacter newCharacter = new NewCharacter();
-            Character c = newCharacter.NewCharacter();
+            Character_App c = newCharacter.NewCharacter();
             databaseC.put(u.getRegisterNumber(), c);
             databaseManager.saveDatabaseC(databaseC);
             menu(u);
         }
         else{
             DeleteCharacter deleteCharacter = new DeleteCharacter();
-            Character c = deleteCharacter.deleteCharacter(u);
+            Character_App c = deleteCharacter.deleteCharacter(u);
             if (c != null){
                 menu(u);
             }
@@ -63,11 +63,11 @@ public class CharacterMenu  implements Serializable {
         this.databaseManager = databaseManager;
     }
 
-    public Map<String, Character> getDatabaseC() {
+    public Map<String, Character_App> getDatabaseC() {
         return databaseC;
     }
 
-    public void setDatabaseC(Map<String, Character> databaseC) {
+    public void setDatabaseC(Map<String, Character_App> databaseC) {
         this.databaseC = databaseC;
     }
     public void menu(User u){

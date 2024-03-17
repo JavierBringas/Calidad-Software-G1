@@ -3,14 +3,14 @@ import java.util.*;
 
 public class EquipmentMenu implements Serializable {
     private DatabaseManager databaseManager = new DatabaseManager();
-    private Map<String, Character> databaseC = new HashMap<>();
+    private Map<String, Character_App> databaseC = new HashMap<>();
     private boolean duel;
 
-    public Map<String, Character> getDatabaseC() {
+    public Map<String, Character_App> getDatabaseC() {
         return databaseC;
     }
 
-    public void setDatabaseC(Map<String, Character> databaseC) {
+    public void setDatabaseC(Map<String, Character_App> databaseC) {
         this.databaseC = databaseC;
     }
 
@@ -29,7 +29,7 @@ public class EquipmentMenu implements Serializable {
 
 
         databaseC = databaseManager.obtainDatabaseC();
-        Character c = databaseC.get(u.getRegisterNumber());
+        Character_App c = databaseC.get(u.getRegisterNumber());
         List<Armor> ArmadurasInv = c.getArmorSet();
 
         System.out.print("\n<><><><><><><><><><><><><><><><><><><>\n");

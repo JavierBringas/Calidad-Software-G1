@@ -1,4 +1,4 @@
-public class Fighter extends Character implements Cloneable{
+public class Fighter extends Character_App_App implements Cloneable{
     private int fighterHP;
     private int minionHP;
     private boolean defiant;

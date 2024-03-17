@@ -10,13 +10,13 @@ class NameTest {
     @Test
     void name() {
         Name name = new Name();
-        Character character = new Character();
+        Character_App Character_App = new Character_App();
         String[] entradas = {"JoseLuis","JoseLuis","a"};
         String ch = String.join(System.lineSeparator(), entradas) + System.lineSeparator();
-        character.setName("a");
+        Character_App.setName("a");
         InputStream in = new ByteArrayInputStream(ch.getBytes());
         System.setIn(in);
-        Character nuevoper = name.Name(character);
+        Character_App nuevoper = name.Name(character);
         assertEquals("JoseLuis", nuevoper.getName());
 
         ch = "salir\n";

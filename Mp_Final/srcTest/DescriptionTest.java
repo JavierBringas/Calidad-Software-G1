@@ -11,13 +11,13 @@ class DescriptionTest {
     @Test
     void description() {
         Description description = new Description();
-        Character character = new Character();
+        Character_App Character_App = new Character_App();
         String[] entradas = {"Ahora es oro 3"};
         String ch = String.join(System.lineSeparator(), entradas) + System.lineSeparator();
-        character.setDescription("Es un platita");
+        Character_App.setDescription("Es un platita");
         InputStream in = new ByteArrayInputStream(ch.getBytes());
         System.setIn(in);
-        Character nuevoper = description.Description(character);
+        Character_App nuevoper = description.Description(character);
 
 
         assertEquals("Ahora es oro 3", nuevoper.getDescription());

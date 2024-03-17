@@ -14,7 +14,7 @@ class FighterTest {
         String ch = String.join(System.lineSeparator(), entradas) + System.lineSeparator();
         InputStream in = new ByteArrayInputStream(ch.getBytes());
         System.setIn(in);
-        Character c = newCh.NewCharacter();
+        Character_App c = newCh.NewCharacter();
         Fighter fighter = new Fighter();
 
         fighter.setName(c.getName());

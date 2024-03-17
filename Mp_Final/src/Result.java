@@ -9,7 +9,7 @@ public class Result implements Serializable {
 
     private Map<String, History> databaseH = new HashMap<>();
 
-    private Map<String, Character> databaseC = new HashMap<>();
+    private Map<String, Character_App> databaseC = new HashMap<>();
     private DatabaseManager databaseManager;
 
 
@@ -75,11 +75,11 @@ public class Result implements Serializable {
         menu.Menu(u);
     }
 
-    public Map<String, Character> getDatabaseC() {
+    public Map<String, Character_App> getDatabaseC() {
         return databaseC;
     }
 
-    public void setDatabaseC(Map<String, Character> databaseC) {
+    public void setDatabaseC(Map<String, Character_App> databaseC) {
         this.databaseC = databaseC;
     }
 

@@ -14,7 +14,7 @@ class ChallengeMenuTest {
     void challengeMenu() {
         ChallengeMenu challengeMenu = new ChallengeMenu();
         DatabaseManager databaseManager = new DatabaseManager();
-        Map<String, Character> databaseC = databaseManager.obtainDatabaseC();
+        Map<String, Character_App> databaseC = databaseManager.obtainDatabaseC();
         User user = new User();
         Map<String, List<Challenge>> databaseP = databaseManager.obtainDatabaseP();
         String[] entradas = {"¬q","qwertyu","yepa","salir"};
@@ -23,8 +23,8 @@ class ChallengeMenuTest {
         System.setIn(in);
         user.setName("yepa");
         user.setRegisterNumber("0000");
-        Character character = new Character();
-        character.setGoldValue(1000);
+        Character_App Character_App = new Character_App();
+        Character_App.setGoldValue(1000);
         databaseC.put("0000",character);
         challengeMenu.ChallengeMenu(user);
 

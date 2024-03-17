@@ -6,9 +6,9 @@ public class NewCharacter implements Serializable {
     private DatabaseManager databaseManager;
 
 
-    public Character NewCharacter(){
+    public Character_App NewCharacter(){
         Scanner input = new Scanner(System.in);
-        Character nuevoChar = new Character();
+        Character_App nuevoChar = new Character_App();
         String nombre;
         String tiponuevo ;
         int numero = 0;
@@ -241,11 +241,11 @@ public class NewCharacter implements Serializable {
         return nuevalista;
     }
 
-    public Map<String, Character> getDatabaseC() {
+    public Map<String, Character_App> getDatabaseC() {
         return databaseC;
     }
 
-    public void setDatabaseC(Map<String, Character> databaseC) {
+    public void setDatabaseC(Map<String, Character_App> databaseC) {
         this.databaseC = databaseC;
     }
 
