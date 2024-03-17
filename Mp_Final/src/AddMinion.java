@@ -69,7 +69,7 @@ public class AddMinion implements Serializable {
 
                     Random rand = new Random();
                     Ghoul ghoul = new Ghoul();
-                    int randomIndex = rand.nextInt(1, 6);
+                    int randomIndex = rand.nextInt(6);
                     ghoul.setTipominion(TMinion.GHOUL);
                     ghoul.setHitPoints(newMinion.getHitPoints());
                     ghoul.setName(newMinion.getName());

@@ -43,13 +43,13 @@ public class Character_App implements Serializable {
 
         if (type.equalsIgnoreCase("Vampiro")){
             this.type = TCharacter.VAMPIRE;
-            this.typeAttack = rand.nextInt(0, 11);
+            this.typeAttack = rand.nextInt(11);
         } else if (type.equalsIgnoreCase("Licántropo")) {
             this.type = TCharacter.WEREWOLF;
-            this.typeAttack = rand.nextInt(0, 4);
+            this.typeAttack = rand.nextInt(4);
         }else {
             this.type = TCharacter.HUNTER;
-            this.typeAttack = rand.nextInt(0, 4);
+            this.typeAttack = rand.nextInt(4);
         }
     }
 

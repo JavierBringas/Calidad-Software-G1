@@ -59,7 +59,7 @@ public class NewCharacter implements Serializable {
                 }
                 case "3" : {
                     nuevoChar.setType("Vampiro");
-                    nuevoChar.setAge(rand.nextInt(20, 101));
+                    nuevoChar.setAge(rand.nextInt(101));
                     isVamp = true;
                     System.out.println("<<Personaje creado correctamente>>");
                     b = false;
@@ -73,7 +73,7 @@ public class NewCharacter implements Serializable {
         nuevoChar.setDescription(desc);
         nuevoChar.setGoldValue(300);
         nuevoChar.sethP(5);
-        nuevoChar.setPower(rand.nextInt(0,5));
+        nuevoChar.setPower(rand.nextInt(5));
         nuevoChar.setWins(0);
         nuevoChar.setWeaponSet(newWeapon());
         nuevoChar.setArmorSet(newArmor());
@@ -84,8 +84,8 @@ public class NewCharacter implements Serializable {
         // nueva habilidad
         Ability ab = new Ability();
         ab.setType(nuevoChar.getType());
-        ab.setAttack(rand.nextInt(1,4));
-        ab.setDefense(rand.nextInt(1,4));
+        ab.setAttack(rand.nextInt(4));
+        ab.setDefense(rand.nextInt(4));
         nuevoChar.setSpecialAbility(ab);
 
         // mod
@@ -220,11 +220,11 @@ public class NewCharacter implements Serializable {
 
         for (int a = 0 ; a < 3; a++) {
             Modifiers nuevoMod = new Modifiers();
-            nombre = nombresBuffos[rand.nextInt(0,6)];
+            nombre = nombresBuffos[rand.nextInt(6)];
             nuevoMod.setName(nombre);
             nuevoMod.setActive(false);
-            nuevoMod.setValue(rand.nextInt(1, 6));
-            nuevobuff = rand.nextInt(0, 2);
+            nuevoMod.setValue(rand.nextInt(6));
+            nuevobuff = rand.nextInt( 2);
                 if (nuevobuff == 0) {
                     nuevoMod.setBuff(false);
                 }
