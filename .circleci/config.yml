@@ -13,6 +13,8 @@ jobs:
           name: Download JUnit Jupiter JAR
           command: |
             curl -o junit-jupiter.jar https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter/5.8.1/junit-jupiter-5.8.1.jar
+            curl -o hamcrest-core.jar https://repo.maven.apache.org/maven2/org/hamcrest/hamcrest-core/2.2/hamcrest-core-2.2.jar
+      
 
       # Compilar y ejecutar los tests
       - run:
