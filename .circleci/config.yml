@@ -14,6 +14,12 @@ jobs:
           command: |
             curl -o junit-jupiter.jar https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter/5.8.1/junit-jupiter-5.8.1.jar
 
+      # Verificar la existencia del archivo JAR
+      - run:
+          name: Verify JUnit Jupiter JAR
+          command: |
+            ls -l junit-jupiter.jar
+
       # Compilar y ejecutar los tests
       - run:
           name: Compile and Run Java Tests
