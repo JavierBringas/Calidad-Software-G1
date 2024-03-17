@@ -53,7 +53,7 @@ public class AddMinion implements Serializable {
 
 
             switch (type) {
-                case "Humano" -> {
+                case "Humano" : {
                     Random rand = new Random();
                     Human human = new Human();
                     TLoyalty[] loy = TLoyalty.values();
@@ -65,7 +65,7 @@ public class AddMinion implements Serializable {
 
                     m.add(human);
                 }
-                case "Ghoul" -> {
+                case "Ghoul" : {
 
                     Random rand = new Random();
                     Ghoul ghoul = new Ghoul();
@@ -77,7 +77,7 @@ public class AddMinion implements Serializable {
                     m.add(ghoul);
 
                 }
-                case "Demonio" -> {
+                case "Demonio" : {
                     newMinion.setTipominion(TMinion.DEMON);
                     Demon demon = new Demon();
                     demon.setName(newMinion.getName());
@@ -85,25 +85,25 @@ public class AddMinion implements Serializable {
                     demon.setHitPoints(newMinion.getHitPoints());
 
                     System.out.println("¿Cuál es el pacto?");
-                    System.out.println("-->");
+                    System.out.println("-:");
                     String pacto = scanner.nextLine();
                     demon.setPact(pacto);
                     System.out.println("¿Quieres añadir un minion al demonio (S/N)");
-                    System.out.println("-->");
+                    System.out.println("-:");
                     String opt = scanner.nextLine();
                     List<Minion> minList = new ArrayList<>();
                     while (opt.equalsIgnoreCase("S")) {
                         AddMinion addMinion = new AddMinion();
                         minList = addMinion.AddMinion(minList);
                         System.out.println("¿Quieres añadir otro minion al demonio (S/N)");
-                        System.out.println("-->");
+                        System.out.println("-:");
                         opt = scanner.nextLine();
                     }
                     demon.setMinionList(minList);
                     demon.setPact(pacto);
                     m.add(demon);
                 }
-                default -> System.out.println("Tipo erróneo");
+                default : System.out.println("Tipo erróneo");
 
             }
 

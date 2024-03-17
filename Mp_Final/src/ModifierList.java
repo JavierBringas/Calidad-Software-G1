@@ -46,13 +46,13 @@ public class ModifierList {
         System.out.println("3. Valor");
         String option = scanner.nextLine();
         switch (option) {
-            case "1" -> {
+            case "1" : {
                 System.out.print("Ingrese el nuevo nombre: ");
 
                 String newName = scanner.nextLine();
                 modi.setName(newName);
             }
-            case "2" -> {
+            case "2" : {
                 if (modi.isBuff()) {
                     System.out.println("Ha pasado de ser una fortaleza a ser una debilidad");
                 } else {
@@ -60,7 +60,7 @@ public class ModifierList {
                 }
                 modi.setBuff(!modi.isBuff());
             }
-            case "3" -> {
+            case "3" : {
                 int newValue = 0;
                 while (newValue < 1 || newValue > 5) {
                     System.out.print("Ingrese el nuevo valor (entre 1 y 5): ");
@@ -76,7 +76,7 @@ public class ModifierList {
                 }
                 modi.setValue(newValue);
             }
-            default -> System.out.println("Opción inválida. Intente nuevamente.");
+            default : System.out.println("Opción inválida. Intente nuevamente.");
         }
          if (option.equals("1") || option.equals("2") || option.equals("3")){
              System.out.println("Característica modificada correctamente.");

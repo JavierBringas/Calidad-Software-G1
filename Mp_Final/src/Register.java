@@ -22,7 +22,7 @@ public class Register implements Serializable {
             System.out.println("[-------------------------------------]\n");
             System.out.println("Si desea salir escriba 'salir' en el campo del nombre");
             do {
-                System.out.print("\n--> Introduce tu nombre: ");
+                System.out.print("\n-: Introduce tu nombre: ");
                 username = input.nextLine();
                 if (username.equalsIgnoreCase("salir")){
                     Welcome();
@@ -31,14 +31,14 @@ public class Register implements Serializable {
                     System.out.println("  <<Nombre de usuario ya usado>>");
                 }else {
                     do {
-                        System.out.print("\n--> Introduce tu contraseña (entre 8 y 12 caracteres): ");
+                        System.out.print("\n-: Introduce tu contraseña (entre 8 y 12 caracteres): ");
                         password = input.nextLine();
                         if(password.length() < 7 | password.length() > 13){
                             System.out.println("                  <<Longitud incorrecta>>");
                         }
                     }while (password.length() < 7 | password.length() > 13);
                     if(!username.startsWith("¬")) {
-                        System.out.print("\n--> Introduce tu apodo en juego: ");
+                        System.out.print("\n-: Introduce tu apodo en juego: ");
                         nickname = input.nextLine();
 
                     }

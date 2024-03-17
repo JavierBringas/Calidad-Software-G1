@@ -81,84 +81,84 @@ public class EditCharacter implements Serializable {
 
 
             switch (numberOption) {
-                case 1 -> {
+                case 1 : {
                     c = editName(c);
                     databaseC.put(player, c);
                     databaseManager.saveDatabaseC(databaseC);
                     System.out.println("Nombre editado.");
                 }
-                case 2 -> {
+                case 2 : {
                     c = editType(c);
                     databaseC.put(player, c);
                     databaseManager.saveDatabaseC(databaseC);
                     System.out.println("Tipo editado.");
                 }
-                case 3 -> {
+                case 3 : {
                     c = editWeaponSet(c);
                     databaseC.put(player, c);
                     databaseManager.saveDatabaseC(databaseC);
                     System.out.println("Equipo de armas editado.");
 
                 }
-                case 4 -> {
+                case 4 : {
                     c = editArmor(c);
                     databaseC.put(player, c);
                     databaseManager.saveDatabaseC(databaseC);
                     System.out.println("Equipo de armaduras editado.");
                 }
-                case 5 -> {
+                case 5 : {
                     c = editHitPoints(c);
                     databaseC.put(player, c);
                     databaseManager.saveDatabaseC(databaseC);
                     System.out.println("Puntos de vida editados.");
                 }
-                case 6 -> {
+                case 6 : {
                     c = editPower(c);
                     databaseC.put(player, c);
                     databaseManager.saveDatabaseC(databaseC);
                     System.out.println("Poder editado.");
                 }
-                case 7 -> {
+                case 7 : {
                     c = editMinionMap(c);
                     databaseC.put(player, c);
                     databaseManager.saveDatabaseC(databaseC);
                     System.out.println("Mapa de secuaces editado.");
                 }
-                case 8 -> {
+                case 8 : {
                     c = editDescription(c);
                     databaseC.put(player, c);
                     databaseManager.saveDatabaseC(databaseC);
                     System.out.println("Descripción editada.");
                 }
-                case 9 -> {
+                case 9 : {
                     c = editSpecialAbilities(c);
                     databaseC.put(player, c);
                     databaseManager.saveDatabaseC(databaseC);
                     System.out.println("Habilidades especiales editadas.");
                 }
-                case 10 -> {
+                case 10 : {
                     c = editGoldValues(c);
                     databaseC.put(player, c);
                     databaseManager.saveDatabaseC(databaseC);
                     System.out.println("Valores de oro editados.");
                 }
-                case 11 -> {
+                case 11 : {
                     c = editModifiersList(c);
                     databaseC.put(player, c);
                     databaseManager.saveDatabaseC(databaseC);
                     System.out.println("Lista de modificadores editada.");
                 }
-                case 12 -> {
+                case 12 : {
                     c = editWins(c);
                     databaseC.put(player, c);
                     databaseManager.saveDatabaseC(databaseC);
                     System.out.println("Victorias editadas.");
                 }
-                case 13-> {
+                case 13: {
                     System.out.println("Saliendo...");
                     exit = true;
                 }
-                default -> System.out.println("Opción no válida. Vuelva a intentarlo.");
+                default : System.out.println("Opción no válida. Vuelva a intentarlo.");
             }
         }
         menuAdmin(u);

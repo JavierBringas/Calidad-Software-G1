@@ -43,14 +43,14 @@ public class MinionMap {
                 option = scanner.nextLine();
                 List<Minion> minionMap = c.getMinionMap();
                 switch (option) {
-                    case "1" -> {
+                    case "1" : {
                         System.out.print("Ingrese el nuevo nombre: ");
                         String newName = scanner.nextLine();
                         minion.setName(newName);
                         minionMap.set(minionIndex, minion);
                         c.setMinionMap(minionMap);
                     }
-                    case "2" -> {
+                    case "2" : {
                         int hp = 0;
                         while (hp < 1 || hp > 3) {
                             System.out.print("Ingrese el nuevo valor de puntos de vida (entre 1 y 3): ");
@@ -68,16 +68,16 @@ public class MinionMap {
                         }
                         minion.setHitPoints(hp);
                     }
-                    case "3" -> {
+                    case "3" : {
                         String nuevoTipo;
                         do {
                             System.out.println("El tipo actual de esbirro es " + minion.getTipominion());
                             System.out.print("\n");
                             System.out.println("       -- Seleccione un tipo --");
-                            System.out.println("-> Humano");
-                            System.out.println("-> Ghoul");
-                            System.out.println("-> Demonio");
-                            System.out.println("-->");
+                            System.out.println(": Humano");
+                            System.out.println(": Ghoul");
+                            System.out.println(": Demonio");
+                            System.out.println("-:");
                             nuevoTipo = scanner.nextLine();
                         }while (!nuevoTipo.equalsIgnoreCase("humano") && !nuevoTipo.equalsIgnoreCase("ghoul") && !nuevoTipo.equalsIgnoreCase("demonio"));
                         if (nuevoTipo.equals("humano")) {
@@ -108,18 +108,18 @@ public class MinionMap {
                             demon.setName(minion.getName());
                             demon.setTipominion(TMinion.DEMON);
                             System.out.println("¿Cuál es el pacto?");
-                            System.out.println("-->");
+                            System.out.println("-:");
                             String pacto = scanner.nextLine();
                             demon.setPact(pacto);
                             System.out.println("¿Quieres añadir un esbirro al demonio, 'S' si si otra cosa si no");
-                            System.out.println("-->");
+                            System.out.println("-:");
                             String opt = scanner.nextLine();
                             List<Minion> minList = new ArrayList<>();
                             while (opt.equalsIgnoreCase("S")) {
                                 AddMinion addMinion = new AddMinion();
                                 minList = addMinion.AddMinion(minList);
                                 System.out.println("¿Quieres añadir otro esbirro al demonio (S/N)");
-                                System.out.println("-->");
+                                System.out.println("-:");
                                 opt = scanner.nextLine();
                             }
                             demon.setMinionList(minList);
@@ -128,7 +128,7 @@ public class MinionMap {
                             c.setMinionMap(minionMap);
                         }
                     }
-                    default -> System.out.println("Opción inválida. Intente nuevamente.");
+                    default : System.out.println("Opción inválida. Intente nuevamente.");
                 }
             }while(!option.equals("1") && !option.equals("2") && !option.equals("3"));
 

@@ -13,7 +13,7 @@ public class Fighter extends Character implements Cloneable{
         int attPot, defPot;
         f.minionHP = 0;
         switch (tipo) {
-            case VAMPIRE -> {
+            case VAMPIRE : {
                 attPot = f.getPower() + f.getSpecialAbility().getAttack();
                 defPot = f.getPower() + f.getSpecialAbility().getDefense();
 
@@ -75,7 +75,7 @@ public class Fighter extends Character implements Cloneable{
                 f.setDefensePower(defPot);
                 f.setAttackPower(attPot);
             }
-            case WEREWOLF -> {
+            case WEREWOLF : {
                 attPot = f.getPower() + f.getSpecialAbility().getAttack();
                 defPot = f.getPower() + f.getSpecialAbility().getDefense();
                 // armaduras
@@ -132,7 +132,7 @@ public class Fighter extends Character implements Cloneable{
                 f.setDefensePower(defPot);
                 f.setAttackPower(attPot);
             }
-            case HUNTER -> {
+            case HUNTER : {
                 attPot = f.getPower() + f.getSpecialAbility().getAttack() + f.getTypeAttack();
                 defPot = f.getPower() + f.getSpecialAbility().getDefense() + f.getTypeAttack();
 

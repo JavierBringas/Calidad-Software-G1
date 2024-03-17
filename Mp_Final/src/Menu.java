@@ -57,7 +57,7 @@ public class Menu implements Serializable {
                                 System.out.println("2. Rechazar " + "(pierdes:" + (int) Math.round(redondeado) + ")");
                                 forcedoption = scanner.nextLine();
                                 switch (forcedoption) {
-                                    case "1" -> {
+                                    case "1" : {
                                         d = false;
                                         databaseP = databaseManager.obtainDatabaseP();
                                         challengeList = databaseP.get(u.getRegisterNumber());
@@ -69,7 +69,7 @@ public class Menu implements Serializable {
                                         equipmentMenu(u, true);
                                         fight(udefiant, udefied, othergold);
                                     }
-                                    case "2" -> {
+                                    case "2" : {
                                         //probar el rechazar
                                         databaseP = databaseManager.obtainDatabaseP();
                                         challengeList = databaseP.get(u.getRegisterNumber());
@@ -79,7 +79,7 @@ public class Menu implements Serializable {
                                         updateGold(c, popup, u,redondeado);
                                         d = false;
                                     }
-                                    default -> System.out.println("Opción no válida");
+                                    default : System.out.println("Opción no válida");
                                 }
                             }
                         }
@@ -112,25 +112,25 @@ public class Menu implements Serializable {
                 System.out.println("5. Crear nuevo personaje (se borrara el actual)");
                 System.out.println("6. Ranking");
                 System.out.println("7. Normas");
-                System.out.print("--> ");
+                System.out.print("-: ");
                 String option = scanner.nextLine();
                 // personaje, challenge, result
 
                 switch (option) {
 
-                    case "1" -> u = deleteAccount(u); // ok
-                    case "2" -> equipmentMenu(u, false); // ok
-                    case "3" -> challengeMenu(u); // ok
-                    case "4" -> showhistory(u); // ok
-                    case "5" -> characterMenu(u); // ok
-                    case "6" -> ranking(); //ok
-                    case "7" -> rules(); //ok
-                    case "0" -> {
+                    case "1" : u = deleteAccount(u); // ok
+                    case "2" : equipmentMenu(u, false); // ok
+                    case "3" : challengeMenu(u); // ok
+                    case "4" : showhistory(u); // ok
+                    case "5" : characterMenu(u); // ok
+                    case "6" : ranking(); //ok
+                    case "7" : rules(); //ok
+                    case "0" : {
                         exit = false;
                         login();
 
                     }
-                    default -> System.out.println("Opción no válida, por favor intenta de nuevo.");
+                    default : System.out.println("Opción no válida, por favor intenta de nuevo.");
 
                 }
             }

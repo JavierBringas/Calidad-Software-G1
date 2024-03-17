@@ -34,7 +34,7 @@ public class DeleteAdmin  implements Serializable {
                 String option = scanner.nextLine();
 
                 switch (option) {
-                    case "1" -> {
+                    case "1" : {
                         System.out.println("¿Está seguro de que desea eliminar la cuenta de administrador? (S/N)");
                         String confirm = scanner.nextLine();
                         if (confirm.equalsIgnoreCase("S")) {
@@ -50,11 +50,11 @@ public class DeleteAdmin  implements Serializable {
                             System.out.println("Opción no válida. Vuelva a intentarlo.");
                         }
                     }
-                    case "2" -> {
+                    case "2" : {
                         System.out.println("Saliendo...");
                         return u;
                     }
-                    default -> System.out.println("Opción no válida. Vuelva a intentarlo.");
+                    default : System.out.println("Opción no válida. Vuelva a intentarlo.");
                 }
             }
 

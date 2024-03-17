@@ -41,21 +41,21 @@ public class Result implements Serializable {
 
         switch (ganador) {
 
-            case VDEFIANT -> {
+            case VDEFIANT : {
             System.out.println("---------Ganó "+  rondas.get(0).getDefiantInfo().getName() +"-------");
             System.out.println("---------------------------------");
 
 
 
             }
-            case VDEFIED -> {
+            case VDEFIED : {
 
                 System.out.println("---------Ganó "+  rondas.get(0).getDefiedInfo().getName() +"-------");
                 System.out.println("---------------------------------");
 
 
             }
-            case DRAW -> {
+            case DRAW : {
                 System.out.println("--------------Empate---------------");
                 System.out.println("-----------------------------------");
 

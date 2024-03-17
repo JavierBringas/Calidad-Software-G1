@@ -21,7 +21,7 @@ private Map<String, User> databaseU = new HashMap<>();
            String opcion = scanner.nextLine();
            //numero de registro distitno de 0
            switch (opcion) {
-               case "1" -> {
+               case "1" : {
                    // Mostrar todos los usuarios
                    System.out.println("\n--- Lista de Usuarios ---");
                    for (User u : databaseU.values()) {
@@ -32,18 +32,18 @@ private Map<String, User> databaseU = new HashMap<>();
                            System.out.println("Usuario administrador, no se puede banear");
                        } else {
                            if (u.isBanned()) {
-                               System.out.println("--> Este usuario se encuentra baneado");
+                               System.out.println("-: Este usuario se encuentra baneado");
                            } else {
-                               System.out.println("--> Este usuario no se encuentra baneado");
+                               System.out.println("-: Este usuario no se encuentra baneado");
                            }
                        }
                    }
                }
 
-               case "2" -> {
+               case "2" : {
 
                    System.out.println("---  Banear usuario ---");
-                   System.out.print("Introduce el nombre del usuario a banear--> ");
+                   System.out.print("Introduce el nombre del usuario a banear-: ");
                    String codeUser = scanner.nextLine();
                    if (!codeUser.startsWith("¬")) {
                         User u = databaseU.get(codeUser);
@@ -65,9 +65,9 @@ private Map<String, User> databaseU = new HashMap<>();
                    }
 
                }
-               case "3" -> {
+               case "3" : {
                    System.out.println("---  Desbanear usuario ---");
-                   System.out.print("Introduce el nombre del usuario a desbanear--> ");
+                   System.out.print("Introduce el nombre del usuario a desbanear-: ");
                    String codeUser = scanner.nextLine();
                    if (!codeUser.startsWith("¬")) {
                        User u = databaseU.get(codeUser);
@@ -89,8 +89,8 @@ private Map<String, User> databaseU = new HashMap<>();
                    }
 
                }
-               case "4" -> salir = true;
-               default -> System.out.println("Número no válido");
+               case "4" : salir = true;
+               default : System.out.println("Número no válido");
            }
 
        }

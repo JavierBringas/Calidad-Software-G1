@@ -36,15 +36,15 @@ public class AddModifier  implements Serializable {
         System.out.print("Ingrese el tipo de modificación que desea (Debilidad o Fortaleza): ");
         buff = scanner.nextLine().toLowerCase();
         switch (buff) {
-            case "debilidad" -> {
+            case "debilidad" : {
                 b = false;
                 a = false;
             }
-            case "fortaleza" -> {
+            case "fortaleza" : {
                 b = true;
                 a = false;
             }
-            default -> System.out.println("Entrada no reconocida");
+            default : System.out.println("Entrada no reconocida");
         }
     }
 

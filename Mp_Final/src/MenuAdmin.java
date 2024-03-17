@@ -20,22 +20,22 @@ public class MenuAdmin {
 
             String opcion = scanner.nextLine();
             switch (opcion) {
-                case "1" -> {
+                case "1" : {
                     u = deleteAdmin(u);//ok
                     if (u == null) {
                         Welcome welcome = new Welcome();
                         welcome.Welcome();
                     }
                 }
-                case "2" -> editCharacter(u);//ok
-                case "3" -> validateChallenges(u);
-                case "4" -> addFeature(u);//ok
-                case "5" -> banUser();
-                case "6" -> {
+                case "2" : editCharacter(u);//ok
+                case "3" : validateChallenges(u);
+                case "4" : addFeature(u);//ok
+                case "5" : banUser();
+                case "6" : {
                     continuar = false;  //WARNING LINE
                     backAdmin();
                 }
-                default -> System.out.println("Opción inválida");
+                default : System.out.println("Opción inválida");
             }
         }
     }

@@ -87,7 +87,7 @@ public class  ValidateChallenges implements Serializable {
             System.out.println("2. Eliminar");
             op = scanner.nextLine();
             switch (op) {
-                case "1" -> {
+                case "1" : {
                     System.out.println("El desafío " + chIndex + "ha sido validado correctamente.");
                     cc.get(chIndex).setValid(true);
                     System.out.println("Ahora debe escoger las modificaciones");
@@ -199,13 +199,13 @@ public class  ValidateChallenges implements Serializable {
                     databaseC.put(u2.getRegisterNumber(), char2);
                     databaseManager.saveDatabaseC(databaseC);
                 }
-                case "2" -> {
+                case "2" : {
                     System.out.println("El desafío " + chIndex + " ha sido eliminado correctamente.");
                     cc.remove(chIndex);
 
 
                 }
-                default -> System.out.println("Opción inválida");
+                default : System.out.println("Opción inválida");
             }
         }while (!op.equals("1") && !op.equals("2")) ;
 

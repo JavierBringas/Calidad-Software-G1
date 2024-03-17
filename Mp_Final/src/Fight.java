@@ -240,7 +240,7 @@ public class Fight implements Serializable, Cloneable {
 
 
          switch (state){
-             case VDEFIANT -> {
+             case VDEFIANT : {
                  nuevapartida.setWinner(perAnt);
                  perAnt.setGoldValue(perAnt.getGoldValue() + combat.getGoldBet());
                  perEd.setGoldValue(perEd.getGoldValue() - combat.getGoldBet());
@@ -249,18 +249,18 @@ public class Fight implements Serializable, Cloneable {
                  nuevapartida.setMinionsLeft(rondafinal.getDefiantInfo().getFighterHP() - rondafinal.getDefiantInfo().getMinionHP() > 0);
 
              }
-             case VDEFIED -> {
+             case VDEFIED : {
                  nuevapartida.setWinner(perEd);
                  perEd.setGoldValue(perEd.getGoldValue() + combat.getGoldBet());
                  perAnt.setGoldValue(perAnt.getGoldValue() - combat.getGoldBet());
 
                  nuevapartida.setMinionsLeft((rondafinal.getDefiedInfo().getFighterHP() - rondafinal.getDefiedInfo().getMinionHP()) > 0);
              }
-             case DRAW -> {
+             case DRAW : {
                  nuevapartida.setWinner(null);
                  nuevapartida.setMinionsLeft(false);
              }
-             default -> throw new IllegalStateException("Unexpected value: " + state);
+             default : throw new IllegalStateException("Unexpected value: " + state);
          }
          nuevapartida.setGoldBet(combat.getGoldBet());
          nuevapartida.setDate(date);

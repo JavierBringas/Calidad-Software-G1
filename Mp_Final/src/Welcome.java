@@ -13,7 +13,7 @@ public class Welcome {
             System.out.println("2. Registrarse");
             System.out.println("3. Salir");
             System.out.println("[-------------------------------------]\n");
-            System.out.print("--> Escoja una opción: ");
+            System.out.print("-: Escoja una opción: ");
             String input = scanner.nextLine();
             int numero = 0;
             try {

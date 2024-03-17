@@ -56,12 +56,12 @@ public class AddFeature  implements Serializable {
 
 
         switch (option) {
-            case "1" -> c = addModifier(c);
-            case "2" -> c = addWeapon(c);
-            case "3" -> c = addArmor(c);
-            case "4" -> c = addMinions(c);
-            case "5" -> exit = true;
-            default -> System.out.println("Opción inválida. Intente de nuevo.");
+            case "1" : c = addModifier(c);
+            case "2" : c = addWeapon(c);
+            case "3" : c = addArmor(c);
+            case "4" : c = addMinions(c);
+            case "5" : exit = true;
+            default : System.out.println("Opción inválida. Intente de nuevo.");
         }
         databaseC.put(player,c);
         databaseManager.saveDatabaseC(databaseC);

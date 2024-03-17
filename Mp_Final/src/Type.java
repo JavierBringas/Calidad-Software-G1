@@ -12,9 +12,9 @@ public class Type implements Serializable {
         }
         System.out.print("\n");
         System.out.println("-- Seleccione un personaje --");
-        System.out.println("-> Vampiro");
-        System.out.println("-> Licántropo");
-        System.out.println("-> Cazador");
+        System.out.println(": Vampiro");
+        System.out.println(": Licántropo");
+        System.out.println(": Cazador");
         Scanner scanner = new Scanner(System.in);
         String nuevoTipo = scanner.nextLine();
 

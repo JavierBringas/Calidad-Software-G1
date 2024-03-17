@@ -43,12 +43,12 @@ public class WeaponSet {
         System.out.println("4. Manos");
         String option = scanner.nextLine();
             switch (option) {
-                case "1" -> {
+                case "1" : {
                     System.out.print("Ingrese el nuevo nombre: ");
                     String newName = scanner.nextLine();
                     weapon.setName(newName);
                 }
-                case "2" -> {
+                case "2" : {
                     int newAttack = 0;
                     while (newAttack < 1 || newAttack > 3) {
                         System.out.print("Ingrese el nuevo valor de ataque (entre 1 y 3): ");
@@ -64,7 +64,7 @@ public class WeaponSet {
                     }
                     weapon.setAttack(newAttack);
                 }
-                case "3" -> {
+                case "3" : {
                     int newDefense = 0;
                     while (newDefense < 1 || newDefense > 3) {
                         System.out.print("Ingrese el nuevo valor de defensa (entre 1 y 3): ");
@@ -80,7 +80,7 @@ public class WeaponSet {
                     }
                     weapon.setDefence(newDefense);
                 }
-                case "4" -> {
+                case "4" : {
                     int newHands = 0;
                     while (newHands < 1 || newHands > 2) {
                         System.out.print("Ingrese el nuevo valor de manos (entre 1 y 2): ");
@@ -96,7 +96,7 @@ public class WeaponSet {
                     }
                     weapon.setHands(newHands);
                 }
-                default -> System.out.println("Opción inválida. Intente nuevamente.");
+                default : System.out.println("Opción inválida. Intente nuevamente.");
             }
         if (option.equals("1") || option.equals("2") || option.equals("3") || option.equals("4")){
             System.out.println("Característica modificada correctamente.");

@@ -24,7 +24,7 @@ public class Login implements Serializable {
         do {
             do {
                 do {
-                    System.out.print("--> Introduce tu nombre (escribe 'salir' para salir): ");
+                    System.out.print("-: Introduce tu nombre (escribe 'salir' para salir): ");
                     username = input.nextLine();
                     if (username.equalsIgnoreCase("salir")){
                         this.welcome();
@@ -38,7 +38,7 @@ public class Login implements Serializable {
                 user = databaseU.get(username);
                 truepassword = user.getPassword();
 
-                System.out.print("--> Introduce tu contraseña: ");
+                System.out.print("-: Introduce tu contraseña: ");
                 password = input.nextLine();
                 if(!truepassword.equals(password)){
                     System.out.println("    <<Contraseña incorrecta>>");

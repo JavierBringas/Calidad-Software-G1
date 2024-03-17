@@ -51,7 +51,7 @@ public class EquipmentMenu implements Serializable {
 
         do {
             System.out.println("\n[-------------------------------------]");
-            System.out.print("--> Introduce el numero de la armadura a equipar: ");
+            System.out.print("-: Introduce el numero de la armadura a equipar: ");
             selectedA = input.nextLine();
             try {
                 a = Integer.parseInt(selectedA);
@@ -97,7 +97,7 @@ public class EquipmentMenu implements Serializable {
 
         do {
             System.out.println("\n[-------------------------------------]");
-            System.out.print("--> Introduce el numero del arma a equipar: ");
+            System.out.print("-: Introduce el numero del arma a equipar: ");
             selectedW = input.nextLine();
 
             try {

@@ -16,11 +16,11 @@ public class NewCharacter implements Serializable {
         System.out.println("\n[-------------------------------------]");
         System.out.println("          CREACION DE PERSONAJE");
         System.out.println(  "[-------------------------------------]\n");
-        System.out.print("--> Introduce tu nombre de personaje:");
+        System.out.print("-: Introduce tu nombre de personaje:");
         nombre = input.nextLine();
         nuevoChar.setName(nombre);
 
-        System.out.print("--> Introduce la historia de tu personaje:");
+        System.out.print("-: Introduce la historia de tu personaje:");
         String desc = input.nextLine();
 
         boolean isVamp = false;
@@ -28,12 +28,12 @@ public class NewCharacter implements Serializable {
         Random rand = new Random();
 
         do {
-        System.out.println("--> Elije el número de la raza a escoger");
+        System.out.println("-: Elije el número de la raza a escoger");
 
         System.out.println("1: Cazador.");
         System.out.println("2: Licantropo.");
         System.out.println("3: Vampiro.");
-            System.out.print("--> ");
+            System.out.print("-: ");
        tiponuevo = input.nextLine();
 
             try {
@@ -45,19 +45,19 @@ public class NewCharacter implements Serializable {
 
             }
             switch (tiponuevo) {
-                case "1" -> {
+                case "1" : {
                     nuevoChar.setType("Cazador");
                     System.out.println("<<Personaje creado correctamente>>");
                     b = false;
 
                 }
-                case "2" -> {
+                case "2" : {
                     nuevoChar.setType("Licántropo");
                     System.out.println("<<Personaje creado correctamente>>");
                     b = false;
 
                 }
-                case "3" -> {
+                case "3" : {
                     nuevoChar.setType("Vampiro");
                     nuevoChar.setAge(rand.nextInt(20, 101));
                     isVamp = true;
@@ -66,7 +66,7 @@ public class NewCharacter implements Serializable {
 
                 }
 
-                default -> System.out.println("No has introducido un entero válido.");
+                default : System.out.println("No has introducido un entero válido.");
             }
 
         } while (b);

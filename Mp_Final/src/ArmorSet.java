@@ -40,13 +40,13 @@ public class ArmorSet implements Serializable {
             System.out.println("3. Defensa");
             String option = scanner.nextLine();
             switch (option) {
-                case "1" -> {
+                case "1" : {
                     System.out.print("Ingrese el nuevo nombre: ");
 
                     String newName = scanner.nextLine();
                     armor.setName(newName);
                 }
-                case "2" -> {
+                case "2" : {
                     int newAttack = -1;
                     while (newAttack < 0 || newAttack > 3) {
                         System.out.print("Ingrese el nuevo valor de ataque (entre 0 y 3): ");
@@ -64,7 +64,7 @@ public class ArmorSet implements Serializable {
                         armor.setAttack(newAttack);
                     }
                 }
-                case "3" -> {
+                case "3" : {
                     int newDefense = 0;
                     while (newDefense < 1 || newDefense > 3) {
                         System.out.print("Ingrese el nuevo valor de defensa (entre 1 y 3): ");
@@ -81,7 +81,7 @@ public class ArmorSet implements Serializable {
                     }
                     armor.setDefense(newDefense);
                 }
-                default -> System.out.println("Opción inválida. Intente nuevamente.");
+                default : System.out.println("Opción inválida. Intente nuevamente.");
             }
             if (option.equals("1") || option.equals("2") || option.equals("3")) {
                 System.out.println("Característica modificada correctamente.");
