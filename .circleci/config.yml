@@ -10,11 +10,13 @@ jobs:
       - checkout
       # Replace this with a real test runner invocation
       - run:
-          name: Install Maven
-          command: sudo apt-get install -y maven
-      - run:
           name: Build and Test
           command: mvn test
+      - run:
+          name: Compile and Run Java Tests
+          command: |
+            javac -cp .:junit.jar Ability.java AbilityTest.java
+            java -cp .:junit.jar:hamcrest-core.jar org.junit.runner.JUnitCore AbilityTest
   build:
     docker:
       - image: cimg/base:stable
