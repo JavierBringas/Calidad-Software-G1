@@ -105,11 +105,11 @@ public class NewCharacter implements Serializable {
         for (int a = 0 ; a < 5; a++) {
             Weapon nuevoWeapon = new Weapon();
             Random randInt = new Random();
-            nombre = nombresArmas[(randInt.nextInt(0, 10))];
-            nuevoWeapon.setAttack(randInt.nextInt(1, 4));
-            nuevoWeapon.setDefence(randInt.nextInt(0, 3));
+            nombre = nombresArmas[(randInt.nextInt(10))];
+            nuevoWeapon.setAttack(randInt.nextInt(4));
+            nuevoWeapon.setDefence(randInt.nextInt(3));
             nuevoWeapon.setName(nombre);
-            nuevoWeapon.setHands(randInt.nextInt(1, 3));
+            nuevoWeapon.setHands(randInt.nextInt(3));
             nuevoWeapon.setActive(false);
             listaweapons.add(nuevoWeapon);
 

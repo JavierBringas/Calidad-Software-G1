@@ -200,12 +200,12 @@ public class Fight implements Serializable, Cloneable {
         int exitosD = 0;
         List<Integer> listaresult = new ArrayList<>();
         for (int i = 0; i < f.getAttackPower(); i++) {
-            if (random.nextInt(1, 7) >= 5) {
+            if (random.nextInt( 7) >= 5) {
                 exitosA += 1;
             }
         }
         for (int x = 0 ; x < f.getDefensePower(); x++){
-            if (random.nextInt(1, 7) >= 5) {
+            if (random.nextInt( 7) >= 5) {
                 exitosD += 1;
             }
         }
