@@ -4,7 +4,7 @@ import java.util.*;
 
 public class DatabaseManager implements Serializable{
 
-    public Map<String,Character> obtainDatabaseC() {
+    public Map<String,Character_App> obtainDatabaseC() {
         File file = new File("Character.bin");
         if (!file.exists()) {
             try {
@@ -17,7 +17,7 @@ public class DatabaseManager implements Serializable{
         try {
             FileInputStream fis = new FileInputStream(file);
             ObjectInputStream ois = new ObjectInputStream(fis);
-            Map<String,Character> m = (Map<String,Character>) ois.readObject();
+            Map<String,Character_App> m = (Map<String,Character_App>) ois.readObject();
             ois.close();
             fis.close();
             return m;
@@ -68,7 +68,7 @@ public class DatabaseManager implements Serializable{
             fis.close();
             return u;
         } catch (Exception e) {
-            Map<String,Character> a = new HashMap<>();
+            Map<String,Character_App> a = new HashMap<>();
             saveDatabaseC(a);
             Map<String,List<Challenge>> m = new HashMap<>();
             saveDatabaseP(m);
@@ -101,7 +101,7 @@ public class DatabaseManager implements Serializable{
         }
     }
 
-    public void saveDatabaseC(Map<String,Character> m ) {
+    public void saveDatabaseC(Map<String,Character_App> m ) {
         File file = new File("Character.bin");
         if (!file.exists()) {
             try {

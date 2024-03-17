@@ -113,7 +113,7 @@ public class ValidateChallengesTest {
         aux2 = databaseManager.obtainDatabaseP();
 
 
-        Map<String,Character> auxC = databaseManager.obtainDatabaseC();
+        Map<String,Character_App> auxC = databaseManager.obtainDatabaseC();
 
         // Assert that the challenges are now validated
         assertTrue(aux2.get(user1.getRegisterNumber()).get(0).isValid());

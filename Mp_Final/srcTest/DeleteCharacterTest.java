@@ -12,8 +12,8 @@ class DeleteCharacterTest {
     void deleteCharacter() {
         DeleteCharacter   deleteCharacter = new DeleteCharacter();
         DatabaseManager databaseManager = new DatabaseManager();
-        Map<String,Character> databaseC = databaseManager.obtainDatabaseC();
-        Map<String,Character> aux = databaseManager.obtainDatabaseC();
+        Map<String,Character_App> databaseC = databaseManager.obtainDatabaseC();
+        Map<String,Character_App> aux = databaseManager.obtainDatabaseC();
         User user = new User();
         Character_App Character_App = new Character_App();
         Character_App.setName("quetzatcoatl");
@@ -47,8 +47,8 @@ class DeleteCharacterTest {
     void deleteCharacter2(){
         DeleteCharacter   deleteCharacter = new DeleteCharacter();
         DatabaseManager databaseManager = new DatabaseManager();
-        Map<String,Character> databaseC = databaseManager.obtainDatabaseC();
-        Map<String,Character> aux = databaseManager.obtainDatabaseC();
+        Map<String,Character_App> databaseC = databaseManager.obtainDatabaseC();
+        Map<String,Character_App> aux = databaseManager.obtainDatabaseC();
         User user = new User();
         Character_App Character_App = new Character_App();
         user.setRegisterNumber("AAAAA");

@@ -2,7 +2,7 @@ import java.io.Serializable;
 import java.util.*;
 
 public class NewCharacter implements Serializable {
-    private Map<String,Character> databaseC = new HashMap<>();
+    private Map<String,Character_App> databaseC = new HashMap<>();
     private DatabaseManager databaseManager;
 
 

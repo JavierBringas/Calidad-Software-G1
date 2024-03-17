@@ -9,14 +9,14 @@ import java.util.function.ToIntFunction;
 import java.util.function.ToLongFunction;
 
 public class Ranking {
-    public List<Character> Ranking(List<Character> Character_Apps){
+    public List<Character_App> Ranking(List<Character_App> Character_Apps){
         if (Character_Apps.size()>1) {
            quickSort (Character_Apps, 0, Character_Apps.size() - 1);
         }
         return Character_Apps;
     }
 
-    public static void quickSort(List<Character> list, int left, int right) {
+    public static void quickSort(List<Character_App> list, int left, int right) {
         if (left < right) {
             int pivotIndex = partition(list, left, right);
             quickSort(list, left, pivotIndex - 1);
@@ -24,7 +24,7 @@ public class Ranking {
         }
     }
 
-    private static int partition(List<Character> list, int left, int right) {
+    private static int partition(List<Character_App> list, int left, int right) {
         int pivotValue = list.get(right).getWins();
         int i = left - 1;
 

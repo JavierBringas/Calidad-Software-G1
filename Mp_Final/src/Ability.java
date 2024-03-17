@@ -15,10 +15,10 @@ public class Ability implements Serializable {
         Random rand =new Random();
         if (type == TCharacter.VAMPIRE){
             this.type = TAbility.DISCIPLINE;
-            setSpecialValue(rand.nextInt(0,4));
+            setSpecialValue(rand.nextInt(4));
         } else if (type == TCharacter.WEREWOLF) {
             this.type = TAbility.GIFT;
-            setSpecialValue(rand.nextInt(0,4));
+            setSpecialValue(rand.nextInt(4));
         }else{
             this.type = TAbility.TALENT;
             setSpecialValue(0);

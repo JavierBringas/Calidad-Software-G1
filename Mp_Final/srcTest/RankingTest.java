@@ -15,8 +15,8 @@ class RankingTest {
         aux2.setWins(100);
         Character_App aux3 = new Character_App();
         aux3.setWins(1);
-        List<Character> charList = new ArrayList<>();
-        List<Character> charList2 = new ArrayList<>();
+        List<Character_App> charList = new ArrayList<>();
+        List<Character_App> charList2 = new ArrayList<>();
         charList.add(aux2);
         charList2.add(aux2);
         Ranking ranking = new Ranking();
