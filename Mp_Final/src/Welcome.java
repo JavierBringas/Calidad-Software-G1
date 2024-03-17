@@ -22,9 +22,9 @@ public class Welcome {
                 System.out.println("<<No has introducido un número entero válido>>");
             }
             switch (numero) {
-                case 1 -> login();
-                case 2 -> register();
-                case 3 -> {
+                case 1: login();
+                case 2: register();
+                case 3: {
                     System.out.println("\nSaliendo...");
                     b = false;
                 }
