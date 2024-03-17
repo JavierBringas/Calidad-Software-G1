@@ -11,6 +11,11 @@ jobs:
     steps:
       - checkout
 
+    - run:
+        name: Download JUnit Jupiter JAR
+        command: |
+          curl -o junit-jupiter.jar https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter/5.8.1/junit-jupiter-5.8.1.jar
+
       # Compilar y ejecutar los tests
       - run:
           name: Compile and Run Java Tests
