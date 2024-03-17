@@ -25,9 +25,9 @@ class MinionMapTest {
         String ch = String.join(System.lineSeparator(), entradas1) + System.lineSeparator();
         InputStream in = new ByteArrayInputStream(ch.getBytes());
         System.setIn(in);
-        Character_App = minionMap.MinionMap(character);
+        Character_App = minionMap.MinionMap (Character_App);
 
-        assertEquals(character.getMinionMap().get(0).getName(),"hola");
+        assertEquals (Character_App.getMinionMap().get(0).getName(),"hola");
 
 
         String[] entradas = {"a","2","-1","1","a","0","4","1","Exhaust"};
@@ -37,7 +37,7 @@ class MinionMapTest {
         System.setIn(in);
 
 
-        Character_App = minionMap.MinionMap(character);
+        Character_App = minionMap.MinionMap (Character_App);
         assertEquals("Exhaust" , Character_App.getMinionMap().get(0).getName() );
 
 
@@ -50,7 +50,7 @@ class MinionMapTest {
 
         in = new ByteArrayInputStream(ch.getBytes());
         System.setIn(in);
-        Character_App = minionMap.MinionMap(character);
+        Character_App = minionMap.MinionMap (Character_App);
 
         assertEquals(3 , Character_App.getMinionMap().get(0).getHitPoints() );
 
@@ -61,7 +61,7 @@ class MinionMapTest {
 
         in = new ByteArrayInputStream(ch.getBytes());
         System.setIn(in);
-        Character_App = minionMap.MinionMap(character);
+        Character_App = minionMap.MinionMap (Character_App);
 
         assertEquals(TMinion.HUMAN , Character_App.getMinionMap().get(0).getTipominion() );
 
@@ -69,7 +69,7 @@ class MinionMapTest {
         ch = String.join(System.lineSeparator(), entradas4) + System.lineSeparator();
         in = new ByteArrayInputStream(ch.getBytes());
         System.setIn(in);
-        Character_App = minionMap.MinionMap(character);
+        Character_App = minionMap.MinionMap (Character_App);
 
         assertEquals(TMinion.GHOUL , Character_App.getMinionMap().get(0).getTipominion() );
         // no compruebo meter otro minion porque es AddMinion
@@ -77,7 +77,7 @@ class MinionMapTest {
         ch = String.join(System.lineSeparator(), entradas5) + System.lineSeparator();
         in = new ByteArrayInputStream(ch.getBytes());
         System.setIn(in);
-        Character_App = minionMap.MinionMap(character);
+        Character_App = minionMap.MinionMap (Character_App);
         Demon demon = (Demon) Character_App.getMinionMap().get(0);
         assertEquals(TMinion.DEMON , Character_App.getMinionMap().get(0).getTipominion() );
         assertEquals("a" , demon.getPact());

@@ -35,7 +35,7 @@ class WeaponSetTest {
             InputStream in = new ByteArrayInputStream(ch.getBytes());
             System.setIn(in);
 
-            Character_App = weaponSet.WeaponSet(character);
+            Character_App = weaponSet.WeaponSet (Character_App);
 
             assertEquals("Malmortius" , Character_App.getWeaponSet().get(0).getName() );
 
@@ -45,7 +45,7 @@ class WeaponSetTest {
             in = new ByteArrayInputStream(ch.getBytes());
             System.setIn(in);
 
-            Character_App = weaponSet.WeaponSet(character);
+            Character_App = weaponSet.WeaponSet (Character_App);
 
             assertEquals(3 , Character_App.getWeaponSet().get(0).getAttack() );
 
@@ -55,7 +55,7 @@ class WeaponSetTest {
             in = new ByteArrayInputStream(ch.getBytes());
             System.setIn(in);
 
-            Character_App = weaponSet.WeaponSet(character);
+            Character_App = weaponSet.WeaponSet (Character_App);
 
             assertEquals(2 , Character_App.getWeaponSet().get(0).getDefence() );
 
@@ -65,7 +65,7 @@ class WeaponSetTest {
             in = new ByteArrayInputStream(ch.getBytes());
             System.setIn(in);
 
-            Character_App = weaponSet.WeaponSet(character);
+            Character_App = weaponSet.WeaponSet (Character_App);
 
             assertEquals(2 , Character_App.getWeaponSet().get(0).getHands() );
 
@@ -75,7 +75,7 @@ class WeaponSetTest {
             in = new ByteArrayInputStream(ch.getBytes());
             System.setIn(in);
 
-            Character_App = weaponSet.WeaponSet(character);
+            Character_App = weaponSet.WeaponSet (Character_App);
 
             assertEquals(3 , Character_App.getWeaponSet().get(0).getAttack() );
 
@@ -85,7 +85,7 @@ class WeaponSetTest {
             in = new ByteArrayInputStream(ch.getBytes());
             System.setIn(in);
 
-            Character_App = weaponSet.WeaponSet(character);
+            Character_App = weaponSet.WeaponSet (Character_App);
 
             assertEquals(1 , Character_App.getWeaponSet().get(0).getDefence() );
 
@@ -95,7 +95,7 @@ class WeaponSetTest {
             in = new ByteArrayInputStream(ch.getBytes());
             System.setIn(in);
 
-            Character_App = weaponSet.WeaponSet(character);
+            Character_App = weaponSet.WeaponSet (Character_App);
 
             assertEquals(2 , Character_App.getWeaponSet().get(0).getHands() );
 
@@ -105,7 +105,7 @@ class WeaponSetTest {
             in = new ByteArrayInputStream(ch.getBytes());
             System.setIn(in);
 
-            Character_App = weaponSet.WeaponSet(character);
+            Character_App = weaponSet.WeaponSet (Character_App);
 
             assertEquals(1 , Character_App.getWeaponSet().get(0).getDefence() );
 
@@ -115,7 +115,7 @@ class WeaponSetTest {
             in = new ByteArrayInputStream(ch.getBytes());
             System.setIn(in);
 
-            Character_App = weaponSet.WeaponSet(character);
+            Character_App = weaponSet.WeaponSet (Character_App);
 
             assertEquals(3 , Character_App.getWeaponSet().get(0).getDefence() );
 
@@ -125,7 +125,7 @@ class WeaponSetTest {
             in = new ByteArrayInputStream(ch.getBytes());
             System.setIn(in);
 
-            Character_App = weaponSet.WeaponSet(character);
+            Character_App = weaponSet.WeaponSet (Character_App);
 
             assertEquals(1 , Character_App.getWeaponSet().get(0).getHands() );
 
@@ -135,7 +135,7 @@ class WeaponSetTest {
             in = new ByteArrayInputStream(ch.getBytes());
             System.setIn(in);
 
-            Character_App = weaponSet.WeaponSet(character);
+            Character_App = weaponSet.WeaponSet (Character_App);
 
             assertEquals("Malmortius" , Character_App.getWeaponSet().get(0).getName() );
 

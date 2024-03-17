@@ -16,14 +16,14 @@ class NameTest {
         Character_App.setName("a");
         InputStream in = new ByteArrayInputStream(ch.getBytes());
         System.setIn(in);
-        Character_App nuevoper = name.Name(character);
+        Character_App nuevoper = name.Name (Character_App);
         assertEquals("JoseLuis", nuevoper.getName());
 
         ch = "salir\n";
         in = new ByteArrayInputStream(ch.getBytes());
         System.setIn(in);
         nuevoper.setName("Juan");
-        nuevoper = name.Name(character);
+        nuevoper = name.Name (Character_App);
         assertEquals("Juan",nuevoper.getName());
 
     }

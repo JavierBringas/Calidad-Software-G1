@@ -10,8 +10,8 @@ import java.util.function.ToLongFunction;
 
 public class Ranking {
     public List<Character> Ranking(List<Character> Character_Apps){
-        if(characters.size()>1) {
-           quickSort(characters, 0, Character_Apps.size() - 1);
+        if (Character_Apps.size()>1) {
+           quickSort (Character_Apps, 0, Character_Apps.size() - 1);
         }
         return Character_Apps;
     }

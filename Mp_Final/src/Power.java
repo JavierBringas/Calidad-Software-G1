@@ -2,7 +2,7 @@ import java.io.Serializable;
 import java.util.Scanner;
 
 public class Power implements Serializable {
-    public Character_App Power(Character c) {
+    public Character_App Power (Character_App c) {
         Scanner scanner = new Scanner(System.in);
         int i = c.getPower();
         System.out.println("Poder del personaje: " + (i));

@@ -27,7 +27,7 @@ class SpecialAbilityTest {
 
         InputStream in = new ByteArrayInputStream(ch.getBytes());
         System.setIn(in);
-        Character_App Character_Appaux = specialAbility.SpecialAbility(character);
+        Character_App Character_Appaux = specialAbility.SpecialAbility (Character_App);
 
         assertEquals(2, Character_Appaux.getSpecialAbility().getAttack() );
 
@@ -39,7 +39,7 @@ class SpecialAbilityTest {
         in = new ByteArrayInputStream(ch.getBytes());
         System.setIn(in);
 
-        Character_Appaux = specialAbility.SpecialAbility(character);
+        Character_Appaux = specialAbility.SpecialAbility (Character_App);
 
         assertEquals(2, Character_Appaux.getSpecialAbility().getDefense() );
 
@@ -49,7 +49,7 @@ class SpecialAbilityTest {
         System.setIn(in);
 
 
-        Character_Appaux = specialAbility.SpecialAbility(character);
+        Character_Appaux = specialAbility.SpecialAbility (Character_App);
         assertEquals(1, Character_Appaux.getSpecialAbility().getAttack() );
 
     }

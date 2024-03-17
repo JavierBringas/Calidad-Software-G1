@@ -15,14 +15,14 @@ class HitPointsTest {
         Character_App.sethP(5);
         InputStream in = new ByteArrayInputStream(ch.getBytes());
         System.setIn(in);
-        Character_App nuevoper = hitPoints.HitPoints(character);
+        Character_App nuevoper = hitPoints.HitPoints (Character_App);
         assertEquals(10, nuevoper.gethP());
 
         ch = "salir\n";
         Character_App.sethP(5);
         in = new ByteArrayInputStream(ch.getBytes());
         System.setIn(in);
-        nuevoper = hitPoints.HitPoints(character);
+        nuevoper = hitPoints.HitPoints (Character_App);
         assertEquals(5, nuevoper.gethP());
     }
 }

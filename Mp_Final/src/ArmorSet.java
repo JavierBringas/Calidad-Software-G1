@@ -3,7 +3,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class ArmorSet implements Serializable {
-    public Character_App ArmorSet(Character c){
+    public Character_App ArmorSet (Character_App c){
         int j = 0;
         System.out.println("----------------[Conjunto de armaduras]-----------------");
         for(int i = 0; i<c.getArmorSet().size();i++) {

@@ -15,14 +15,14 @@ class GoldValueTest {
         Character_App.setGoldValue(5);
         InputStream in = new ByteArrayInputStream(ch.getBytes());
         System.setIn(in);
-        Character_App nuevoper = goldValue.GoldValue(character);
+        Character_App nuevoper = goldValue.GoldValue (Character_App);
         assertEquals(15, nuevoper.getGoldValue());
 
         ch = "salir\n";
         Character_App.setGoldValue(45);
         in = new ByteArrayInputStream(ch.getBytes());
         System.setIn(in);
-        nuevoper = goldValue.GoldValue(character);
+        nuevoper = goldValue.GoldValue (Character_App);
         assertEquals(45, nuevoper.getGoldValue());
     }
 }

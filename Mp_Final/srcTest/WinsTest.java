@@ -15,14 +15,14 @@ class WinsTest {
         Character_App.setWins(5);
         InputStream in = new ByteArrayInputStream(ch.getBytes());
         System.setIn(in);
-        Character_App nuevoper = wins.Wins(character);
+        Character_App nuevoper = wins.Wins (Character_App);
         assertEquals(15, nuevoper.getWins());
 
         ch = "salir\n";
         Character_App.setWins(45);
         in = new ByteArrayInputStream(ch.getBytes());
         System.setIn(in);
-        nuevoper = wins.Wins(character);
+        nuevoper = wins.Wins (Character_App);
         assertEquals(45, nuevoper.getWins());
     }
 }

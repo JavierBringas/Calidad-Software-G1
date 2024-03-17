@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Wins{
 
-    public Character_App Wins(Character c) {
+    public Character_App Wins (Character_App c) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Victorias actuales: " + c.getWins());
 

@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class SpecialAbility implements Serializable {
 
-    public Character_App SpecialAbility(Character c) {
+    public Character_App SpecialAbility (Character_App c) {
 
         Ability ability = c.getSpecialAbility();
         System.out.println("----------------[Habilidad especial]-----------------");

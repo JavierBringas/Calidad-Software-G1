@@ -15,7 +15,7 @@ public class Match implements Serializable {
         return defiant;
     }
 
-    public void setDefiant(Character defiant) {
+    public void setDefiant (Character_App defiant) {
         this.defiant = defiant;
     }
 
@@ -47,7 +47,7 @@ public class Match implements Serializable {
         return defied;
     }
 
-    public void setDefied(Character defied) {
+    public void setDefied (Character_App defied) {
         this.defied = defied;
     }
 
@@ -55,7 +55,7 @@ public class Match implements Serializable {
         return winner;
     }
 
-    public void setWinner(Character winner) {
+    public void setWinner (Character_App winner) {
         this.winner = winner;
     }
 

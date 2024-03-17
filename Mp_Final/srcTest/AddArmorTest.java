@@ -21,7 +21,7 @@ class AddArmorTest {
             InputStream in = new ByteArrayInputStream(input.getBytes());
             System.setIn(in);
 
-            Character_App newCharacter = addArmor.AddArmor(character);
+            Character_App newCharacter = addArmor.AddArmor (Character_App);
             assertEquals(1, newCharacter.getArmorSet().size());
             assertEquals("TestArmor", newCharacter.getArmorSet().get(0).getName());
             assertEquals(3, newCharacter.getArmorSet().get(0).getAttack());
@@ -31,7 +31,7 @@ class AddArmorTest {
             in = new ByteArrayInputStream("salir".getBytes());
             System.setIn(in);
 
-            newCharacter = addArmor.AddArmor(character);
+            newCharacter = addArmor.AddArmor (Character_App);
             assertEquals(1, newCharacter.getArmorSet().size());
 
             String[] entradas2 = {"a","TestArmor","-1","0","0","1"};
@@ -39,7 +39,7 @@ class AddArmorTest {
             in = new ByteArrayInputStream(input.getBytes());
             System.setIn(in);
 
-            newCharacter = addArmor.AddArmor(character);
+            newCharacter = addArmor.AddArmor (Character_App);
             assertEquals(2, newCharacter.getArmorSet().size());
             assertEquals("TestArmor", newCharacter.getArmorSet().get(1).getName());
             assertEquals(0, newCharacter.getArmorSet().get(1).getAttack());

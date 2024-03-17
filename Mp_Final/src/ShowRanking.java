@@ -15,9 +15,9 @@ public class ShowRanking implements Serializable {
         databaseR = databaseManager.obtainDatabaseC();
 
         List<Character> Character_Apps = new ArrayList<>(databaseR.values());
-        Character_Apps = rank.Ranking(characters);
+        Character_Apps = rank.Ranking (Character_Apps);
         System.out.println("[-----------Ranking-----------]");
-        for (Character c : Character_Apps) {
+        for  (Character_App c : Character_Apps) {
             System.out.println("Personaje: " + c.getName() + " Victorias: " + c.getWins());
         }
         Scanner scanner = new Scanner(System.in);

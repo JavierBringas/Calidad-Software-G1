@@ -21,7 +21,7 @@ class AddModifierTest {
         InputStream in = new ByteArrayInputStream(input.getBytes());
         System.setIn(in);
 
-        Character_App newCharacter = addModifier.AddModifier(character);
+        Character_App newCharacter = addModifier.AddModifier (Character_App);
         assertEquals(1, newCharacter.getModifiersList().size());
         assertEquals("TestMod", newCharacter.getModifiersList().get(0).getName());
         assertEquals(5, newCharacter.getModifiersList().get(0).getValue());
@@ -31,7 +31,7 @@ class AddModifierTest {
         in = new ByteArrayInputStream("salir".getBytes());
         System.setIn(in);
 
-        newCharacter = addModifier.AddModifier(character);
+        newCharacter = addModifier.AddModifier (Character_App);
         assertEquals(1, newCharacter.getModifiersList().size());
 
         String[] entradas2 = {"a","TestMod","0","1","Fortaleza"};
@@ -39,7 +39,7 @@ class AddModifierTest {
         in = new ByteArrayInputStream(input.getBytes());
         System.setIn(in);
 
-        newCharacter = addModifier.AddModifier(character);
+        newCharacter = addModifier.AddModifier (Character_App);
         assertEquals(2, newCharacter.getModifiersList().size());
         assertEquals("TestMod", newCharacter.getModifiersList().get(1).getName());
         assertEquals(1, newCharacter.getModifiersList().get(1).getValue());

@@ -4,7 +4,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class WeaponSet {
-    public Character_App WeaponSet(Character c) {
+    public Character_App WeaponSet (Character_App c) {
         int j = 0;
         for (int i = 0; i < c.getWeaponSet().size(); i++) {
                 Weapon weapon = c.getWeaponSet().get(i);

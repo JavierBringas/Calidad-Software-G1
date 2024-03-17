@@ -2,7 +2,7 @@ import java.io.Serializable;
 import java.util.Scanner;
 
 public class Type implements Serializable {
-    public Character_App Type(Character c){
+    public Character_App Type (Character_App c){
         if (c.getType().equals(TCharacter.VAMPIRE)) {
             System.out.println("El tipo actual de personaje es: Vampiro");
         }else if (c.getType().equals(TCharacter.HUNTER)) {

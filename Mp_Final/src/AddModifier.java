@@ -7,7 +7,7 @@ public class AddModifier  implements Serializable {
     private DatabaseManager databaseManager = new DatabaseManager();
 
 
-    public Character_App AddModifier(Character c){
+    public Character_App AddModifier (Character_App c){
     Scanner scanner = new Scanner(System.in);
             System.out.println("Si quiere salir escriba 'salir':");
     String salir = scanner.nextLine();

@@ -15,14 +15,14 @@ class PowerTest {
         Character_App.setPower(5);
         InputStream in = new ByteArrayInputStream(ch.getBytes());
         System.setIn(in);
-        Character_App nuevoper = power.Power(character);
+        Character_App nuevoper = power.Power (Character_App);
         assertEquals(3, nuevoper.getPower());
 
         ch = "salir\n";
         Character_App.setPower(5);
         in = new ByteArrayInputStream(ch.getBytes());
         System.setIn(in);
-        nuevoper = power.Power(character);
+        nuevoper = power.Power (Character_App);
         assertEquals(5, nuevoper.getPower());
     }
 }

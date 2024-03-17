@@ -2,7 +2,7 @@ import java.io.Serializable;
 import java.util.Scanner;
 
 public class Name implements Serializable {
-    public Character_App Name (Character c){
+    public Character_App Name  (Character_App c){
         System.out.println("El nombre actual del personaje es: " + c.getName());
         System.out.println("Escribe el nuevo nombre para el personaje (Introduzca 'salir' para regresar al menu)");
         System.out.print("Escribe dos veces el nombre para confirmar: ");

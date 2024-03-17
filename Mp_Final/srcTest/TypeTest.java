@@ -19,7 +19,7 @@ class TypeTest {
     InputStream in = new ByteArrayInputStream(ch.getBytes());
     System.setIn(in);
     Character_App.setType(TCharacter.WEREWOLF);
-    type.Type(character);
+    type.Type (Character_App);
 
 
 
@@ -30,7 +30,7 @@ class TypeTest {
          in = new ByteArrayInputStream(ch.getBytes());
         System.setIn(in);
         Character_App.setType(TCharacter.VAMPIRE);
-        type.Type(character);
+        type.Type (Character_App);
 
         Assertions.assertEquals(TCharacter.WEREWOLF, Character_App.getType());
 
@@ -39,7 +39,7 @@ class TypeTest {
         in = new ByteArrayInputStream(ch.getBytes());
         System.setIn(in);
         Character_App.setType(TCharacter.WEREWOLF);
-        type.Type(character);
+        type.Type (Character_App);
 
         Assertions.assertEquals(TCharacter.HUNTER, Character_App.getType());
 

@@ -2,7 +2,7 @@
 import java.util.*;
 
 public class MinionMap {
-    public Character_App MinionMap(Character c) {
+    public Character_App MinionMap (Character_App c) {
         int j = 0;
         for (int i = 0; i < c.getMinionMap().size(); i++) {
             Minion minion = c.getMinionMap().get(i);

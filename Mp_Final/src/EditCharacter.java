@@ -169,67 +169,67 @@ public class EditCharacter implements Serializable {
         menuAdmin.MenuAdmin(u);
 
     }
-    private Character_App editName (Character c){
+    private Character_App editName  (Character_App c){
         Name name = new Name();
         c = name.Name(c);
         return c;
     }
-    private Character_App editType (Character c){  //Type
+    private Character_App editType  (Character_App c){  //Type
         Type editType = new Type();
         c = editType.Type(c);
         return c;
     }
 
-    private Character_App editWeaponSet (Character c){ //WeaponSet
+    private Character_App editWeaponSet  (Character_App c){ //WeaponSet
         WeaponSet weaponSet = new WeaponSet();
         c = weaponSet.WeaponSet(c);
         return c;
     }
-    private Character_App editArmor (Character c){
+    private Character_App editArmor  (Character_App c){
         ArmorSet armorSet = new ArmorSet();
         c = armorSet.ArmorSet(c);
         return c;
     }
 
-    private Character_App editHitPoints (Character c){
+    private Character_App editHitPoints  (Character_App c){
         HitPoints HitPoints = new HitPoints();
         c = HitPoints.HitPoints(c);
         return c;
     }
 
-    private Character_App editPower (Character c){
+    private Character_App editPower  (Character_App c){
         Power Power = new Power();
         c = Power.Power(c);
         return c;
     }
 
-    private Character_App editMinionMap (Character c){
+    private Character_App editMinionMap  (Character_App c){
         MinionMap minionMap = new MinionMap();
         c = minionMap.MinionMap(c);
         return c;
     }
 
-    private Character_App editDescription (Character c){
+    private Character_App editDescription  (Character_App c){
         Description description = new Description();
         c = description.Description(c);
         return c;
     }
-    private Character_App editSpecialAbilities (Character c){
+    private Character_App editSpecialAbilities  (Character_App c){
         SpecialAbility specialAbilities = new SpecialAbility();
         c = specialAbilities.SpecialAbility(c);
         return c;
     }
-    private Character_App editGoldValues (Character c){
+    private Character_App editGoldValues  (Character_App c){
         GoldValue goldValues = new GoldValue();
         c = goldValues.GoldValue(c);
         return c;
     }
-    private Character_App editModifiersList (Character c){
+    private Character_App editModifiersList  (Character_App c){
         ModifierList modifiersList = new ModifierList();
         c = modifiersList.ModifierList(c);
         return c;
     }
-    private Character_App editWins (Character c){
+    private Character_App editWins  (Character_App c){
         Wins wins = new Wins();
         c = wins.Wins(c);
         return c;

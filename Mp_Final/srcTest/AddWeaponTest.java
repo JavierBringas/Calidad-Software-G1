@@ -21,7 +21,7 @@ class AddWeaponTest {
         InputStream in = new ByteArrayInputStream(input.getBytes());
         System.setIn(in);
 
-        Character_App newCharacter = addWeapon.AddWeapon(character);
+        Character_App newCharacter = addWeapon.AddWeapon (Character_App);
         assertEquals(1, newCharacter.getWeaponSet().size());
         assertEquals("TestWeapon", newCharacter.getWeaponSet().get(0).getName());
         assertEquals(3, newCharacter.getWeaponSet().get(0).getAttack());
@@ -31,7 +31,7 @@ class AddWeaponTest {
         in = new ByteArrayInputStream("salir".getBytes());
         System.setIn(in);
 
-        newCharacter = addWeapon.AddWeapon(character);
+        newCharacter = addWeapon.AddWeapon (Character_App);
         assertEquals(1, newCharacter.getWeaponSet().size());
 
         String[] entradas2 = {"a","TestWeapon","a","0","1","a","-1","0","a","3","2"};
@@ -39,7 +39,7 @@ class AddWeaponTest {
         in = new ByteArrayInputStream(input.getBytes());
         System.setIn(in);
 
-        newCharacter = addWeapon.AddWeapon(character);
+        newCharacter = addWeapon.AddWeapon (Character_App);
         assertEquals(2, newCharacter.getWeaponSet().size());
         assertEquals("TestWeapon", newCharacter.getWeaponSet().get(1).getName());
         assertEquals(1, newCharacter.getWeaponSet().get(1).getAttack());

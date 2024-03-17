@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Description implements Serializable {
 
-    public Character_App Description(Character c) {
+    public Character_App Description (Character_App c) {
         Scanner scanner = new Scanner(System.in);
         while (true) {
             System.out.println("\nEditar descripción:");

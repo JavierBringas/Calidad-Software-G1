@@ -180,7 +180,7 @@ public class Menu implements Serializable {
 
 
     }
-    private void updateGold(Character c, Challenge ch,User u,double redondeado){
+    private void updateGold (Character_App c, Challenge ch,User u,double redondeado){
         c.setGoldValue(c.getGoldValue() - (int) redondeado);
         databaseC.get(u.getRegisterNumber());
         databaseC.put(u.getRegisterNumber(), c);

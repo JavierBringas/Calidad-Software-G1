@@ -78,25 +78,25 @@ public class AddFeature  implements Serializable {
         this.databaseManager = databaseManager;
     }
 
-    private Character_App addModifier(Character c){
+    private Character_App addModifier (Character_App c){
         AddModifier addModifier = new AddModifier();
         c =  addModifier.AddModifier(c);
         return  c;
     }
 
-    private Character_App addWeapon(Character c){
+    private Character_App addWeapon (Character_App c){
         AddWeapon addWeapon = new AddWeapon();
         c = addWeapon.AddWeapon(c);
         return c;
     }
 
-    private Character_App addArmor(Character c){
+    private Character_App addArmor (Character_App c){
         AddArmor addArmor = new AddArmor();
         c = addArmor.AddArmor(c);
         return c;
     }
 
-    private Character_App addMinions(Character c){
+    private Character_App addMinions (Character_App c){
         AddMinion addMinion = new AddMinion();
         c.setMinionMap(addMinion.AddMinion(c.getMinionMap()));
         return c;

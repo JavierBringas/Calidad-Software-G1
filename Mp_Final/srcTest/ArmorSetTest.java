@@ -36,7 +36,7 @@ class ArmorSetTest {
         InputStream in = new ByteArrayInputStream(ch.getBytes());
         System.setIn(in);
 
-        Character_App = armorSet.ArmorSet(character);
+        Character_App = armorSet.ArmorSet (Character_App);
 
         assertEquals("Coraza del hombre muerto" , Character_App.getArmorSet().get(0).getName() );
 
@@ -48,7 +48,7 @@ class ArmorSetTest {
         in = new ByteArrayInputStream(ch.getBytes());
         System.setIn(in);
 
-        Character_App = armorSet.ArmorSet(character);
+        Character_App = armorSet.ArmorSet (Character_App);
 
         assertEquals(3 , Character_App.getArmorSet().get(0).getAttack() );
 
@@ -58,7 +58,7 @@ class ArmorSetTest {
         in = new ByteArrayInputStream(ch.getBytes());
         System.setIn(in);
 
-        Character_App = armorSet.ArmorSet(character);
+        Character_App = armorSet.ArmorSet (Character_App);
 
         assertEquals(2 , Character_App.getArmorSet().get(0).getDefense() );
 
@@ -73,7 +73,7 @@ class ArmorSetTest {
         in = new ByteArrayInputStream(ch.getBytes());
         System.setIn(in);
 
-        Character_App = armorSet.ArmorSet(character);
+        Character_App = armorSet.ArmorSet (Character_App);
 
         assertEquals(3 , Character_App.getArmorSet().get(0).getAttack() );
 
@@ -84,7 +84,7 @@ class ArmorSetTest {
         in = new ByteArrayInputStream(ch.getBytes());
         System.setIn(in);
 
-        Character_App = armorSet.ArmorSet(character);
+        Character_App = armorSet.ArmorSet (Character_App);
 
 
         assertEquals(1 , Character_App.getArmorSet().get(0).getDefense() );
@@ -100,7 +100,7 @@ class ArmorSetTest {
         in = new ByteArrayInputStream(ch.getBytes());
         System.setIn(in);
 
-        Character_App = armorSet.ArmorSet(character);
+        Character_App = armorSet.ArmorSet (Character_App);
 
         assertEquals(1 , Character_App.getArmorSet().get(0).getDefense() );
 
@@ -110,7 +110,7 @@ class ArmorSetTest {
         in = new ByteArrayInputStream(ch.getBytes());
         System.setIn(in);
 
-        Character_App = armorSet.ArmorSet(character);
+        Character_App = armorSet.ArmorSet (Character_App);
 
         assertEquals(3 , Character_App.getArmorSet().get(0).getDefense() );
 
@@ -120,7 +120,7 @@ class ArmorSetTest {
         in = new ByteArrayInputStream(ch.getBytes());
         System.setIn(in);
 
-        Character_App = armorSet.ArmorSet(character);
+        Character_App = armorSet.ArmorSet (Character_App);
 
         assertEquals(3 , Character_App.getArmorSet().get(0).getDefense() );
 

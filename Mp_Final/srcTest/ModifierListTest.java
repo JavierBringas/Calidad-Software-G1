@@ -31,7 +31,7 @@ class ModifierListTest {
         System.setIn(in);
 
 
-        Character_App = modifierList.ModifierList(character);
+        Character_App = modifierList.ModifierList (Character_App);
 
 
         assertEquals("Exhaust" , Character_App.getModifiersList().get(0).getName() );
@@ -44,9 +44,9 @@ class ModifierListTest {
 
         in = new ByteArrayInputStream(ch.getBytes());
         System.setIn(in);
-        Character_App = modifierList.ModifierList(character);
+        Character_App = modifierList.ModifierList (Character_App);
 
-        assertFalse(character.getModifiersList().get(0).isBuff());
+        assertFalse (Character_App.getModifiersList().get(0).isBuff());
 
         String[] entradas2 = {"1","3", "4"};
 
@@ -55,7 +55,7 @@ class ModifierListTest {
 
         in = new ByteArrayInputStream(ch.getBytes());
         System.setIn(in);
-        Character_App = modifierList.ModifierList(character);
+        Character_App = modifierList.ModifierList (Character_App);
 
         assertEquals(4 , Character_App.getModifiersList().get(0).getValue() );
 
@@ -66,7 +66,7 @@ class ModifierListTest {
 
         in = new ByteArrayInputStream(ch.getBytes());
         System.setIn(in);
-        Character_App = modifierList.ModifierList(character);
+        Character_App = modifierList.ModifierList (Character_App);
 
         assertEquals(5 , Character_App.getModifiersList().get(0).getValue() );
 
@@ -77,7 +77,7 @@ class ModifierListTest {
 
         in = new ByteArrayInputStream(ch.getBytes());
         System.setIn(in);
-        Character_App = modifierList.ModifierList(character);
+        Character_App = modifierList.ModifierList (Character_App);
 
         assertEquals( "바보" , Character_App.getModifiersList().get(0).getName() );
 

@@ -17,7 +17,7 @@ class DescriptionTest {
         Character_App.setDescription("Es un platita");
         InputStream in = new ByteArrayInputStream(ch.getBytes());
         System.setIn(in);
-        Character_App nuevoper = description.Description(character);
+        Character_App nuevoper = description.Description (Character_App);
 
 
         assertEquals("Ahora es oro 3", nuevoper.getDescription());
