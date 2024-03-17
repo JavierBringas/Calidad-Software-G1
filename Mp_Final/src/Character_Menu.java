@@ -1,7 +1,7 @@
 import java.io.Serializable;
 import java.util.*;
 
-public class Character_AppMenu  implements Serializable {
+public class Character_Menu  implements Serializable {
 
     private User user;
     private DatabaseManager databaseManager;
@@ -9,7 +9,7 @@ public class Character_AppMenu  implements Serializable {
 
 
 
-    public  void Character_AppMenu (User u) {
+    public  void Character_Menu (User u) {
         Scanner input = new Scanner(System.in);
         databaseManager = new DatabaseManager();
         databaseC = databaseManager.obtainDatabaseC();

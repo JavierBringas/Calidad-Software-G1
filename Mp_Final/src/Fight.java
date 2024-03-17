@@ -261,35 +261,7 @@ public class Fight implements Serializable, Cloneable {
                  nuevapartida.setMinionsLeft(false);
              }
              default : throw new IllegalStateException("Unexpected value: " + state);
-         }
-         nuevapartida.setGoldBet(combat.getGoldBet());
-         nuevapartida.setDate(date);
-         if (history == null){
-             history = new History();
-         }
-         history.appendMatch(nuevapartida);
-        if (history2 == null){
-            history2 = new History();
-        }
-         history2.appendMatch(nuevapartida);
-
-         databaseH.replace(udefiant.getRegisterNumber() , history);
-         databaseH.replace(udefied.getRegisterNumber() , history2);
-         databaseManager.saveDatabaseH(databaseH);
-
-         databaseC.replace(udefiant.getRegisterNumber(),perAnt);
-         databaseC.replace(udefied.getRegisterNumber(),perEd);
-         databaseManager.saveDatabaseC(databaseC);
-
-         Scanner scanner = new Scanner(System.in);
-         System.out.println("Combate terminado");
-         String aux = scanner.nextLine();
-         listacombates = udefiant.getResultados();
-         listacombates.add(combat);
-         udefiant.setResultados(listacombates);
-         databaseU.replace(udefiant.getName(), udefiant);
-         databaseManager.saveDatabaseU(databaseU);
-         result(combat, udefied);
+    }
 
 
 

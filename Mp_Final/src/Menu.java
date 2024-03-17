@@ -33,10 +33,10 @@ public class Menu implements Serializable {
 
         if (databaseC == null){
             System.out.println("\n <<Es obligatorio crear un persoanje si aún no tienes uno>> ");
-            Character_AppMenu(u);
+            CharacterMenu(u);
         } else if (databaseC.get(u.getRegisterNumber()) == null ){
             System.out.println("\n <<Es obligatorio crear un persoanje si aún no tienes uno>> ");
-            Character_AppMenu(u);
+            CharacterMenu(u);
         }else{
 
            databaseP = databaseManager.obtainDatabaseP();
@@ -122,7 +122,7 @@ public class Menu implements Serializable {
                     case "2" : equipmentMenu(u, false); // ok
                     case "3" : challengeMenu(u); // ok
                     case "4" : showhistory(u); // ok
-                    case "5" : Character_AppMenu(u); // ok
+                    case "5" : CharacterMenu(u); // ok
                     case "6" : ranking(); //ok
                     case "7" : rules(); //ok
                     case "0" : {
@@ -169,9 +169,9 @@ public class Menu implements Serializable {
         showHistory.ShowHistory(u);
 
     }
-    private void Character_AppMenu(User u){
-        Character_AppMenu Character_AppMenu = new Character_AppMenu();
-        Character_AppMenu.CharacterMenu(u);
+    private void CharacterMenu(User u){
+        Character_Menu Character_Menu = new Character_Menu();
+        Character_Menu.Character_Menu(u);
 
     }
     private void ranking(){
