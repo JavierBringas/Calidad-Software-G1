@@ -8,7 +8,7 @@ jobs:
     steps:
       - checkout
 
-      # Compilar la aplicación sin ejecutar pruebas
+      # Compilar la aplicación
       - run:
           name: Compile Java Application
           command: |
