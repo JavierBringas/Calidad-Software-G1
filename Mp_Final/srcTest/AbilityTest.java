@@ -1,6 +1,6 @@
-import org.junit.jupiter.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.Assertions.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 class AbilityTest {
     
