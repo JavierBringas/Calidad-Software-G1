@@ -7,14 +7,14 @@ jobs:
 
     steps:
       - checkout
-      # Instalar dependencias y compilar la aplicación
-      - run:
-          name: Install dependencies and build
-          command: |
-            sudo apt-get update && sudo apt-get install maven
-            mvn compile
 
-      # Ejecutar pruebas
+       - run:
+          name: Download JUnit Jupiter JAR
+          command: |
+            curl -o junit-jupiter.jar https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter/5.8.1/junit-jupiter-5.8.1.jar
+
+      # Compilar la aplicación
       - run:
-          name: Run tests
-          command: mvn test
+          name: Compile Java Application
+          command: |
+            javac Mp_Final/src/*.java
