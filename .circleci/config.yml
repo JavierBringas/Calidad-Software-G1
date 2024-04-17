@@ -7,9 +7,14 @@ jobs:
 
     steps:
       - checkout
-
-      # Compilar la aplicación
+      # Instalar dependencias y compilar la aplicación
       - run:
-          name: Compile Java Application
+          name: Install dependencies and build
           command: |
-            javac Mp_Final/src/*.java
+            sudo apt-get update && sudo apt-get install maven
+            mvn compile
+
+      # Ejecutar pruebas
+      - run:
+          name: Run tests
+          command: mvn test
